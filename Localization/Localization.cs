@@ -8,9 +8,8 @@
  * pretty much do the same thing.
  */
 
-#nullable enable
-namespace ElementalHeartsRevivedMod.Localization {
-    internal class Localization {
+namespace ElementalHeartsRevivedMod {
+    public class Localization {
 
         /// <summary> provides a single method as a proxy for getting localized text with or without text replacements </summary>
         public static string GetText(string key, string? replacementStr = null, object[]? replacements = null) {

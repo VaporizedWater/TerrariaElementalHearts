@@ -20,7 +20,7 @@ namespace ElementalHeartsRevivedMod.src
 
         public override string Texture
         {
-            get => "ElementalHeartsRevivedMod/Assets/Items/Consumables/Hearts/Other/Hard";
+            get => "ElementalHeartsRevivedMod/Assets/Hearts/Other/Hard";
         }
 
         public override bool CanUseItem(Player player)
@@ -44,14 +44,13 @@ namespace ElementalHeartsRevivedMod.src
         public override void SetStaticDefaults()
         {
             Mod.Logger.Error(tag + " initialized.");
-            //CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()
         {
             Item.CloneDefaults(ItemID.LifeFruit);
             Item.rare = ItemRarityID.Gray;
-            Item.value = 0;// -5000;
+            Item.value = 0;
         }
 
         public override void HoldItem(Player player)
@@ -71,7 +70,6 @@ namespace ElementalHeartsRevivedMod.src
         public override void AddRecipes()
         {
             Recipe recipe1 = Recipe.Create(ModContent.ItemType<HardHeart>(), 1);
-            //recipe1.AddIngredient(this, 1);
             recipe1.AddTile(TileID.DemonAltar);
             recipe1.Register();
         }

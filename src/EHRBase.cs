@@ -34,7 +34,7 @@ namespace ElementalHeartsRevivedMod.src {
         protected string maxConsumed;
         protected string maxHP;
         protected string heartNotUsed;
-        protected string path = "ElementalHeartsRevivedMod/Assets/Items/Consumables/Hearts/";
+        protected string path = "ElementalHeartsRevivedMod/Assets/Hearts/";
 
         public EHRBase(
           int category,
