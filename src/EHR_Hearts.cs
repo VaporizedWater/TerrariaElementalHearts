@@ -7,7 +7,7 @@ namespace ElementalHeartsRevivedMod.src
     {
         public class Hardmode
         {
-            public class Adamantite : EHRBase
+            public class Adamantite : EHR_Base
             {
                 public Adamantite()
                   : base(2, TileID.AdamantiteForge, 366)
@@ -15,7 +15,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Bubble : EHRBase
+            public class Bubble : EHR_Base
             {
                 public Bubble()
                   : base(2, val: 1000000)
@@ -23,7 +23,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class BubbleNPC : EHRNPC
+            public class BubbleNPC : EHR_NPC
             {
                 public BubbleNPC()
                   : base(208, ModContent.ItemType<Bubble>())
@@ -31,7 +31,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Chlorophyte : EHRBase
+            public class Chlorophyte : EHR_Base
             {
                 public Chlorophyte()
                   : base(2, TileID.MythrilAnvil, 947)
@@ -39,7 +39,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Cobalt : EHRBase
+            public class Cobalt : EHR_Base
             {
                 public Cobalt()
                   : base(2, TileID.Furnaces, 364)
@@ -47,7 +47,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Cog : EHRBase
+            public class Cog : EHR_Base
             {
                 public Cog()
                   : base(2, val: 1000000)
@@ -55,7 +55,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class CogNPC : EHRNPC
+            public class CogNPC : EHR_NPC
             {
                 public CogNPC()
                   : base(178, ModContent.ItemType<Cog>())
@@ -63,7 +63,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Crystal : EHRBase
+            public class Crystal : EHR_Base
             {
                 public Crystal()
                   : base(2, TileID.MythrilAnvil, 502)
@@ -71,7 +71,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class CursedFlame : EHRBase
+            public class CursedFlame : EHR_Base
             {
                 public CursedFlame()
                   : base(2, TileID.CrystalBall, 522)
@@ -79,7 +79,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Discord : EHRBase
+            public class Discord : EHR_Base
             {
                 public Discord()
                   : base(2, TileID.DemonAltar, 1326)
@@ -87,7 +87,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Ectoplasm : EHRBase
+            public class Ectoplasm : EHR_Base
             {
                 public Ectoplasm()
                   : base(2, TileID.CrystalBall, 1508)
@@ -95,7 +95,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Flesh : EHRBase
+            public class Flesh : EHR_Base
             {
                 public Flesh()
                   : base(2, TileID.FleshCloningVat, 763)
@@ -103,7 +103,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Flight : EHRBase
+            public class Flight : EHR_Base
             {
                 public Flight()
                   : base(2, TileID.MythrilAnvil, 575)
@@ -111,7 +111,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Horny : EHRBase
+            public class Horny : EHR_Base
             {
                 public Horny()
                   : base(2, TileID.MythrilAnvil, 3771)
@@ -119,7 +119,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Ichor : EHRBase
+            public class Ichor : EHR_Base
             {
                 public Ichor()
                   : base(2, TileID.CrystalBall, 1332)
@@ -127,7 +127,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Lesion : EHRBase
+            public class Lesion : EHR_Base
             {
                 public Lesion()
                   : base(2, TileID.LesionStation, 3955)
@@ -135,7 +135,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Light : EHRBase
+            public class Light : EHR_Base
             {
                 public Light()
                   : base(2, TileID.MythrilAnvil, 520)
@@ -143,7 +143,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Luminite : EHRBase
+            public class Luminite : EHR_Base
             {
                 public Luminite()
                   : base(2, TileID.LunarCraftingStation, 3460)
@@ -151,7 +151,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Mythril : EHRBase
+            public class Mythril : EHR_Base
             {
                 public Mythril()
                   : base(2, TileID.MythrilAnvil, 365)
@@ -159,7 +159,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Night : EHRBase
+            public class Night : EHR_Base
             {
                 public Night()
                   : base(2, TileID.MythrilAnvil, 521)
@@ -167,7 +167,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Orichalcum : EHRBase
+            public class Orichalcum : EHR_Base
             {
                 public Orichalcum()
                   : base(2, TileID.MythrilAnvil, 1105)
@@ -175,7 +175,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Palladium : EHRBase
+            public class Palladium : EHR_Base
             {
                 public Palladium()
                   : base(2, TileID.Furnaces, 1104)
@@ -183,7 +183,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Pearlsand : EHRBase
+            public class Pearlsand : EHR_Base
             {
                 public Pearlsand()
                   : base(2, TileID.HeavyWorkBench, 408)
@@ -191,7 +191,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Pearlstone : EHRBase
+            public class Pearlstone : EHR_Base
             {
                 public Pearlstone()
                   : base(2, TileID.Furnaces, ItemID.PearlstoneBlock)
@@ -199,7 +199,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Pearlwood : EHRBase
+            public class Pearlwood : EHR_Base
             {
                 public Pearlwood()
                   : base(2, TileID.Sawmill, ItemID.Pearlwood)
@@ -207,7 +207,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class PinkIce : EHRBase
+            public class PinkIce : EHR_Base
             {
                 public PinkIce()
                   : base(2, TileID.IceMachine, 834)
@@ -215,7 +215,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Rainbow : EHRBase
+            public class Rainbow : EHR_Base
             {
                 public Rainbow()
                   : base(2, TileID.Anvils, 662, rainbowEffect: true)
@@ -223,7 +223,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class SpookyWood : EHRBase
+            public class SpookyWood : EHR_Base
             {
                 public SpookyWood()
                   : base(2, TileID.Sawmill, 1729)
@@ -231,7 +231,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Titanium : EHRBase
+            public class Titanium : EHR_Base
             {
                 public Titanium()
                   : base(2, TileID.AdamantiteForge, 1106)
@@ -242,7 +242,7 @@ namespace ElementalHeartsRevivedMod.src
 
         public class PreHardmode
         {
-            public class Amber : EHRBase
+            public class Amber : EHR_Base
             {
                 public Amber()
                   : base(4, TileID.TreeAmber, 999)
@@ -250,7 +250,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Amethyst : EHRBase
+            public class Amethyst : EHR_Base
             {
                 public Amethyst()
                   : base(4, TileID.TreeAmethyst, 181)
@@ -258,7 +258,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class BorealWood : EHRBase
+            public class BorealWood : EHR_Base
             {
                 public BorealWood()
                   : base(4, TileID.Sawmill, 2503)
@@ -266,7 +266,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Cactus : EHRBase
+            public class Cactus : EHR_Base
             {
                 public Cactus()
                   : base(4, TileID.Sawmill, 276)
@@ -274,7 +274,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class CandyCane : EHRBase
+            public class CandyCane : EHR_Base
             {
                 public CandyCane()
                   : base(4, TileID.WorkBenches, 586)
@@ -282,7 +282,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Cloud : EHRBase
+            public class Cloud : EHR_Base
             {
                 public Cloud()
                   : base(4, TileID.SkyMill, 751)
@@ -290,7 +290,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Copper : EHRBase
+            public class Copper : EHR_Base
             {
                 public Copper()
                   : base(4, TileID.Furnaces, 12)
@@ -298,7 +298,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Coralstone : EHRBase
+            public class Coralstone : EHR_Base
             {
                 public Coralstone()
                   : base(4, TileID.WorkBenches, 2435)
@@ -306,7 +306,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Crimsand : EHRBase
+            public class Crimsand : EHR_Base
             {
                 public Crimsand()
                   : base(4, TileID.HeavyWorkBench, 1246)
@@ -314,7 +314,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Crimtane : EHRBase
+            public class Crimtane : EHR_Base
             {
                 public Crimtane()
                   : base(4, TileID.Furnaces, 880)
@@ -322,7 +322,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Demonite : EHRBase
+            public class Demonite : EHR_Base
             {
                 public Demonite()
                   : base(4, TileID.Furnaces, 56)
@@ -330,7 +330,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Diamond : EHRBase
+            public class Diamond : EHR_Base
             {
                 public Diamond()
                   : base(4, TileID.TreeDiamond, 182)
@@ -338,7 +338,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Dirt : EHRBase
+            public class Dirt : EHR_Base
             {
                 public Dirt()
                   : base(4, TileID.WorkBenches, 2)
@@ -346,7 +346,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Dynasty : EHRBase
+            public class Dynasty : EHR_Base
             {
                 public Dynasty()
                   : base(4, TileID.Sawmill, 2260)
@@ -354,7 +354,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Ebonsand : EHRBase
+            public class Ebonsand : EHR_Base
             {
                 public Ebonsand()
                   : base(4, TileID.HeavyWorkBench, 370)
@@ -362,7 +362,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Ebonstone : EHRBase
+            public class Ebonstone : EHR_Base
             {
                 public Ebonstone()
                   : base(4, TileID.Furnaces, 61)
@@ -370,7 +370,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Emerald : EHRBase
+            public class Emerald : EHR_Base
             {
                 public Emerald()
                   : base(4, TileID.TreeEmerald, 179)
@@ -378,7 +378,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Enchanted : EHRBase
+            public class Enchanted : EHR_Base
             {
                 public Enchanted()
                   : base(4, TileID.DemonAltar, 989)
@@ -386,7 +386,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Fossil : EHRBase
+            public class Fossil : EHR_Base
             {
                 public Fossil()
                   : base(4, TileID.Extractinator, 3347)
@@ -394,7 +394,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Glass : EHRBase
+            public class Glass : EHR_Base
             {
                 public Glass()
                   : base(4, TileID.GlassKiln, 170)
@@ -402,7 +402,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Gold : EHRBase
+            public class Gold : EHR_Base
             {
                 public Gold()
                   : base(4, TileID.Furnaces, 13)
@@ -410,7 +410,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Granite : EHRBase
+            public class Granite : EHR_Base
             {
                 public Granite()
                   : base(4, TileID.WorkBenches, 3087)
@@ -418,7 +418,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Hay : EHRBase
+            public class Hay : EHR_Base
             {
                 public Hay()
                   : base(4, TileID.WorkBenches, 1727)
@@ -426,7 +426,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Hellstone : EHRBase
+            public class Hellstone : EHR_Base
             {
                 public Hellstone()
                   : base(4, TileID.Hellforge, 174)
@@ -434,7 +434,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Honey : EHRBase
+            public class Honey : EHR_Base
             {
                 public Honey()
                   : base(4, TileID.HoneyDispenser, 1125)
@@ -442,7 +442,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Ice : EHRBase
+            public class Ice : EHR_Base
             {
                 public Ice()
                   : base(4, TileID.IceMachine, 664)
@@ -450,7 +450,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Iron : EHRBase
+            public class Iron : EHR_Base
             {
                 public Iron()
                   : base(4, TileID.Furnaces, 11)
@@ -458,7 +458,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Lead : EHRBase
+            public class Lead : EHR_Base
             {
                 public Lead()
                   : base(4, TileID.Furnaces, 700)
@@ -466,7 +466,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class LifeCrystal : EHRBase
+            public class LifeCrystal : EHR_Base
             {
                 public LifeCrystal()
                   : base(4, TileID.DemonAltar, 29, 4)
@@ -474,7 +474,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Marble : EHRBase
+            public class Marble : EHR_Base
             {
                 public Marble()
                   : base(4, TileID.WorkBenches, 3081)
@@ -482,7 +482,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Meteorite : EHRBase
+            public class Meteorite : EHR_Base
             {
                 public Meteorite()
                   : base(4, TileID.Furnaces, 116)
@@ -490,7 +490,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Mushroom : EHRBase
+            public class Mushroom : EHR_Base
             {
                 public Mushroom()
                   : base(4, TileID.Sawmill, 183)
@@ -498,7 +498,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Obsidian : EHRBase
+            public class Obsidian : EHR_Base
             {
                 public Obsidian()
                   : base(4, TileID.Hellforge, 173)
@@ -506,7 +506,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class PalmWood : EHRBase
+            public class PalmWood : EHR_Base
             {
                 public PalmWood()
                   : base(4, TileID.Sawmill, 2504)
@@ -514,7 +514,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Platinum : EHRBase
+            public class Platinum : EHR_Base
             {
                 public Platinum()
                   : base(4, TileID.Furnaces, 702)
@@ -522,7 +522,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Pumpkin : EHRBase
+            public class Pumpkin : EHR_Base
             {
                 public Pumpkin()
                   : base(4, TileID.Sawmill, 1725)
@@ -531,7 +531,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class PurpleIce : EHRBase
+            public class PurpleIce : EHR_Base
             {
                 public PurpleIce()
                   : base(4, TileID.IceMachine, 833)
@@ -539,7 +539,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class RainCloud : EHRBase
+            public class RainCloud : EHR_Base
             {
                 public RainCloud()
                   : base(4, TileID.SkyMill, 765)
@@ -547,7 +547,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class RedIce : EHRBase
+            public class RedIce : EHR_Base
             {
                 public RedIce()
                   : base(4, TileID.IceMachine, 835)
@@ -555,7 +555,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class RichMahogany : EHRBase
+            public class RichMahogany : EHR_Base
             {
                 public RichMahogany()
                   : base(4, TileID.Sawmill, 620)
@@ -563,7 +563,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Ruby : EHRBase
+            public class Ruby : EHR_Base
             {
                 public Ruby()
                   : base(4, TileID.TreeRuby, 178)
@@ -571,7 +571,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Sand : EHRBase
+            public class Sand : EHR_Base
             {
                 public Sand()
                   : base(4, TileID.HeavyWorkBench, 169)
@@ -579,7 +579,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Sapphire : EHRBase
+            public class Sapphire : EHR_Base
             {
                 public Sapphire()
                   : base(4, TileID.TreeSapphire, 177)
@@ -587,7 +587,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Shadewood : EHRBase
+            public class Shadewood : EHR_Base
             {
                 public Shadewood()
                   : base(4, TileID.Sawmill, 911)
@@ -595,7 +595,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Silver : EHRBase
+            public class Silver : EHR_Base
             {
                 public Silver()
                   : base(4, TileID.Furnaces, 14)
@@ -603,7 +603,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Slime : EHRBase
+            public class Slime : EHR_Base
             {
                 public Slime()
                   : base(4, TileID.Solidifier, 23)
@@ -611,7 +611,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class SnowCloud : EHRBase
+            public class SnowCloud : EHR_Base
             {
                 public SnowCloud()
                   : base(4, TileID.SkyMill, 3756)
@@ -620,7 +620,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Stone : EHRBase
+            public class Stone : EHR_Base
             {
                 public Stone()
                   : base(4, TileID.Furnaces, 3)
@@ -629,7 +629,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Sunplate : EHRBase
+            public class Sunplate : EHR_Base
             {
                 public Sunplate()
                   : base(4, TileID.SkyMill, 824)
@@ -637,7 +637,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Tin : EHRBase
+            public class Tin : EHR_Base
             {
                 public Tin()
                   : base(4, TileID.Furnaces, 699)
@@ -645,7 +645,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Topaz : EHRBase
+            public class Topaz : EHR_Base
             {
                 public Topaz()
                   : base(4, TileID.TreeTopaz, 180)
@@ -654,7 +654,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Tungsten : EHRBase
+            public class Tungsten : EHR_Base
             {
                 public Tungsten()
                   : base(4, TileID.Furnaces, 701)
@@ -662,7 +662,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Wood : EHRBase
+            public class Wood : EHR_Base
             {
                 public Wood()
                   : base(4, TileID.Sawmill, 9)
@@ -673,7 +673,7 @@ namespace ElementalHeartsRevivedMod.src
 
         public class Boss
         {
-            public class Betsy : EHRBase
+            public class Betsy : EHR_Base
             {
                 public Betsy()
                   : base(1, boss: true)
@@ -681,7 +681,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class BetsyNPC : EHRNPC
+            public class BetsyNPC : EHR_NPC
             {
                 public BetsyNPC()
                   : base(551, ModContent.ItemType<Betsy>(), false)
@@ -689,7 +689,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class BrainOfCthulhu : EHRBase
+            public class BrainOfCthulhu : EHR_Base
             {
                 public BrainOfCthulhu()
                   : base(1, boss: true)
@@ -697,7 +697,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class BrainOfCthulhuNPC : EHRNPC
+            public class BrainOfCthulhuNPC : EHR_NPC
             {
                 public BrainOfCthulhuNPC()
                   : base(266, ModContent.ItemType<BrainOfCthulhu>(), false)
@@ -705,7 +705,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Deer : EHRBase
+            public class Deer : EHR_Base
             {
                 public Deer()
                   : base(1, boss: true)
@@ -713,7 +713,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class DeerNPC : EHRNPC
+            public class DeerNPC : EHR_NPC
             {
                 public DeerNPC()
                   : base(668, ModContent.ItemType<Deer>(), false)
@@ -721,7 +721,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class DukeFishron : EHRBase
+            public class DukeFishron : EHR_Base
             {
                 public DukeFishron()
                   : base(1, boss: true)
@@ -729,7 +729,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class DukeFishronNPC : EHRNPC
+            public class DukeFishronNPC : EHR_NPC
             {
                 public DukeFishronNPC()
                   : base(370, ModContent.ItemType<DukeFishron>(), false)
@@ -737,7 +737,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class EaterOfWorlds : EHRBase
+            public class EaterOfWorlds : EHR_Base
             {
                 public EaterOfWorlds()
                   : base(1, boss: true)
@@ -745,7 +745,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class EaterOfWorldsNPC : EHRNPC
+            public class EaterOfWorldsNPC : EHR_NPC
             {
                 public EaterOfWorldsNPC()
                   : base(item: ModContent.ItemType<EaterOfWorlds>(), shopLoot: false, isEaterOfWorlds: true)
@@ -753,7 +753,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class EmpressOfLight : EHRBase
+            public class EmpressOfLight : EHR_Base
             {
                 public EmpressOfLight()
                   : base(1, boss: true)
@@ -761,7 +761,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class EmpressOfLightNPC : EHRNPC
+            public class EmpressOfLightNPC : EHR_NPC
             {
                 public EmpressOfLightNPC()
                   : base(661, ModContent.ItemType<EmpressOfLight>(), false)
@@ -769,7 +769,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class EyeOfCthulhu : EHRBase
+            public class EyeOfCthulhu : EHR_Base
             {
                 public EyeOfCthulhu()
                   : base(1, boss: true)
@@ -777,7 +777,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class EyeOfCthulhuNPC : EHRNPC
+            public class EyeOfCthulhuNPC : EHR_NPC
             {
                 public EyeOfCthulhuNPC()
                   : base(4, ModContent.ItemType<EyeOfCthulhu>(), false)
@@ -785,7 +785,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class FlyingDutchman : EHRBase
+            public class FlyingDutchman : EHR_Base
             {
                 public FlyingDutchman()
                   : base(1, boss: true)
@@ -793,7 +793,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class FlyingDutchmanNPC : EHRNPC
+            public class FlyingDutchmanNPC : EHR_NPC
             {
                 public FlyingDutchmanNPC()
                   : base(491, ModContent.ItemType<FlyingDutchman>(), false)
@@ -801,7 +801,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Golem : EHRBase
+            public class Golem : EHR_Base
             {
                 public Golem()
                   : base(1, boss: true)
@@ -809,7 +809,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class GolemNPC : EHRNPC
+            public class GolemNPC : EHR_NPC
             {
                 public GolemNPC()
                   : base(245, ModContent.ItemType<Golem>(), false)
@@ -817,7 +817,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class KingSlime : EHRBase
+            public class KingSlime : EHR_Base
             {
                 public KingSlime()
                   : base(1, boss: true)
@@ -825,7 +825,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class KingSlimeNPC : EHRNPC
+            public class KingSlimeNPC : EHR_NPC
             {
                 public KingSlimeNPC()
                   : base(50, ModContent.ItemType<KingSlime>(), false)
@@ -833,7 +833,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class LunaticCultist : EHRBase
+            public class LunaticCultist : EHR_Base
             {
                 public LunaticCultist()
                   : base(1, boss: true)
@@ -841,7 +841,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class LunaticCultistNPC : EHRNPC
+            public class LunaticCultistNPC : EHR_NPC
             {
                 public LunaticCultistNPC()
                   : base(439, ModContent.ItemType<LunaticCultist>(), false)
@@ -849,7 +849,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class MartianSaucer : EHRBase
+            public class MartianSaucer : EHR_Base
             {
                 public MartianSaucer()
                   : base(1, boss: true)
@@ -857,7 +857,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class MartianSaucerNPC : EHRNPC
+            public class MartianSaucerNPC : EHR_NPC
             {
                 public MartianSaucerNPC()
                   : base(395, ModContent.ItemType<MartianSaucer>(), false)
@@ -865,7 +865,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class MoonLord : EHRBase
+            public class MoonLord : EHR_Base
             {
                 public MoonLord()
                   : base(1, boss: true)
@@ -873,7 +873,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class MoonLordNPC : EHRNPC
+            public class MoonLordNPC : EHR_NPC
             {
                 public MoonLordNPC()
                   : base(398, ModContent.ItemType<MoonLord>(), false)
@@ -881,7 +881,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Plantera : EHRBase
+            public class Plantera : EHR_Base
             {
                 public Plantera()
                   : base(1, boss: true)
@@ -889,7 +889,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class PlanteraNPC : EHRNPC
+            public class PlanteraNPC : EHR_NPC
             {
                 public PlanteraNPC()
                   : base(262, ModContent.ItemType<Plantera>(), false)
@@ -897,7 +897,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class QueenBee : EHRBase
+            public class QueenBee : EHR_Base
             {
                 public QueenBee()
                   : base(1, boss: true)
@@ -905,7 +905,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class QueenBeeNPC : EHRNPC
+            public class QueenBeeNPC : EHR_NPC
             {
                 public QueenBeeNPC()
                   : base(222, ModContent.ItemType<QueenBee>(), false)
@@ -913,7 +913,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class QueenSlime : EHRBase
+            public class QueenSlime : EHR_Base
             {
                 public QueenSlime()
                   : base(1, boss: true)
@@ -921,7 +921,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class QueenSlimeNPC : EHRNPC
+            public class QueenSlimeNPC : EHR_NPC
             {
                 public QueenSlimeNPC()
                   : base(657, ModContent.ItemType<QueenSlime>(), false)
@@ -929,7 +929,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class Skeletron : EHRBase
+            public class Skeletron : EHR_Base
             {
                 public Skeletron()
                   : base(1, boss: true)
@@ -937,7 +937,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class SkeletronNPC : EHRNPC
+            public class SkeletronNPC : EHR_NPC
             {
                 public SkeletronNPC()
                   : base(35, ModContent.ItemType<Skeletron>(), false)
@@ -945,7 +945,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class SoulOfFright : EHRBase
+            public class SoulOfFright : EHR_Base
             {
                 public SoulOfFright()
                   : base(1, boss: true)
@@ -953,7 +953,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class SoulOfFrightNPC : EHRNPC
+            public class SoulOfFrightNPC : EHR_NPC
             {
                 public SoulOfFrightNPC()
                   : base(sbyte.MaxValue, ModContent.ItemType<SoulOfFright>(), false)
@@ -961,7 +961,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class SoulOfMight : EHRBase
+            public class SoulOfMight : EHR_Base
             {
                 public SoulOfMight()
                   : base(1, boss: true)
@@ -969,7 +969,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class SoulOfMightNPC : EHRNPC
+            public class SoulOfMightNPC : EHR_NPC
             {
                 public SoulOfMightNPC()
                   : base(TileID.MythrilAnvil, ModContent.ItemType<SoulOfMight>(), false)
@@ -977,7 +977,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class SoulOfSight : EHRBase
+            public class SoulOfSight : EHR_Base
             {
                 public SoulOfSight()
                   : base(1, boss: true)
@@ -985,7 +985,7 @@ namespace ElementalHeartsRevivedMod.src
                 }
             }
 
-            public class SoulOfSightNPC : EHRNPC
+            public class SoulOfSightNPC : EHR_NPC
             {
                 public SoulOfSightNPC()
                   : base(125, ModContent.ItemType<SoulOfSight>(), false)

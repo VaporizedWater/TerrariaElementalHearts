@@ -8,7 +8,7 @@ using Terraria.ModLoader.IO;
 
 namespace ElementalHeartsRevivedMod.src
 {
-    public class EHRTracker : ModPlayer
+    public class EHR_Tracker : ModPlayer
     {
         public IDictionary<string, int> used = new Dictionary<string, int>();
 
@@ -35,9 +35,11 @@ namespace ElementalHeartsRevivedMod.src
 
         public override void PostSavePlayer()
         {
-            if (!ModContent.GetInstance<EHRConfig>().RoamingLogsEnabled)
+            if (!ModContent.GetInstance<EHR_Config>().RoamingLogsEnabled)
                 return;
-            string folderPath = Environment.GetFolderPath((Environment.SpecialFolder)26);
+
+            
+            string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string str = DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Day.ToString() + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString();
             File.WriteAllLines(folderPath + "/EHTracker-" + str + ".txt", used.Select(x => "[" + x.Key + " " + x.Value.ToString() + "]").ToArray());
             File.WriteAllLines(folderPath + "/EHTrackerLast.txt", used.Select(x => "[" + x.Key + " " + x.Value.ToString() + "]").ToArray());

@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHeartsRevivedMod.src
 {
-    public abstract class EHRNPC : GlobalNPC
+    public abstract class EHR_NPC : GlobalNPC
     {
         private readonly int npcType;
         private readonly int item;
@@ -14,7 +14,7 @@ namespace ElementalHeartsRevivedMod.src
         private readonly int killsRequired;
         private readonly bool isEaterOfWorlds;
 
-        public EHRNPC(int npcType = -1, int item = -1, bool shopLoot = true, int killsRequired = 1, bool isEaterOfWorlds = false)
+        public EHR_NPC(int npcType = -1, int item = -1, bool shopLoot = true, int killsRequired = 1, bool isEaterOfWorlds = false)
         {
             this.npcType = npcType;
             this.item = item;

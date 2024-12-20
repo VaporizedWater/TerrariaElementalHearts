@@ -12,7 +12,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace ElementalHeartsRevivedMod.src {
-    public class EHRBase : ModItem {
+    public class EHR_Base : ModItem {
         public bool boss;
         public string tag;
         public string name;
@@ -37,7 +37,7 @@ namespace ElementalHeartsRevivedMod.src {
         protected string heartNotUsed;
         protected string path = "ElementalHeartsRevivedMod/Assets/Hearts/";
 
-        public EHRBase(
+        public EHR_Base(
           int category,
           int station = 0,
           int material = 0,
@@ -68,12 +68,12 @@ namespace ElementalHeartsRevivedMod.src {
                     pathCategoryPrefix = "PreHardmode/";
                     break;
             }
-            bonusHP = !boss ? (rarity + 1) * ModContent.GetInstance<EHRConfig>().EHRLovePower : (int)(Math.Round(ModContent.GetInstance<EHRConfig>().EHRLovePower * 2 / 5.0) * 5.0);
+            bonusHP = !boss ? (rarity + 1) * ModContent.GetInstance<EHR_Config>().EHRLovePower : (int)(Math.Round(ModContent.GetInstance<EHR_Config>().EHRLovePower * 2 / 5.0) * 5.0);
             texturePath = path + pathCategoryPrefix + Regex.Replace(tag, " ", string.Empty);
             if (boss)
-                ModContent.GetInstance<EHRMod>().bossHearts.Add(this, ModContent.GetInstance<EHRMod>().bossHearts.Count + 1);
+                ModContent.GetInstance<EHR_Mod>().bossHearts.Add(this, ModContent.GetInstance<EHR_Mod>().bossHearts.Count + 1);
             else if (!boss)
-                ModContent.GetInstance<EHRMod>().naturalHearts.Add(this, ModContent.GetInstance<EHRMod>().naturalHearts.Count + 1);
+                ModContent.GetInstance<EHR_Mod>().naturalHearts.Add(this, ModContent.GetInstance<EHR_Mod>().naturalHearts.Count + 1);
 
             switch (rarity) {
                 case ItemRarityID.Quest:
@@ -143,13 +143,13 @@ namespace ElementalHeartsRevivedMod.src {
 
         public override bool CanUseItem(Player player) {
             if (boss) {
-                if (!ModContent.GetInstance<EHRConfig>().EHRBossEnabled)
+                if (!ModContent.GetInstance<EHR_Config>().EHRBossEnabled)
                     return false;
-            } else if (!ModContent.GetInstance<EHRConfig>().EHRMaterialEnabled)
+            } else if (!ModContent.GetInstance<EHR_Config>().EHRMaterialEnabled)
                 return false;
-            if (ModContent.GetInstance<EHRConfig>().EHRMaxHearts == 0 || ((EffectManager<Filter>)Filters.Scene)["EHRWave"].IsActive())
+            if (ModContent.GetInstance<EHR_Config>().EHRMaxHearts == 0 || ((EffectManager<Filter>)Filters.Scene)["HeartActivationRipple"].IsActive())
                 return false;
-            return !player.GetModPlayer<EHRTracker>().used.ContainsKey(tag) || player.GetModPlayer<EHRTracker>().used[tag] < ModContent.GetInstance<EHRConfig>().EHRMaxHearts * bonusHP;
+            return !player.GetModPlayer<EHR_Tracker>().used.ContainsKey(tag) || player.GetModPlayer<EHR_Tracker>().used[tag] < ModContent.GetInstance<EHR_Config>().EHRMaxHearts * bonusHP;
         }
 
         public override bool? UseItem(Player player) {
@@ -157,15 +157,15 @@ namespace ElementalHeartsRevivedMod.src {
             player.statLife += bonusHP;
             if (Main.myPlayer == player.whoAmI)
                 player.HealEffect(bonusHP, true);
-            if (player.GetModPlayer<EHRTracker>().used.ContainsKey(tag))
-                player.GetModPlayer<EHRTracker>().used[tag] += bonusHP;
+            if (player.GetModPlayer<EHR_Tracker>().used.ContainsKey(tag))
+                player.GetModPlayer<EHR_Tracker>().used[tag] += bonusHP;
             else
-                player.GetModPlayer<EHRTracker>().used.Add(tag, bonusHP);
-            if (Main.netMode != NetmodeID.Server && !((EffectManager<Filter>)Filters.Scene)["EHRWave"].IsActive() && ModContent.GetInstance<EHRConfig>().EHRWaveEnabled) {
-                int index = Projectile.NewProjectile(new EntitySource_ItemUse(player, Item, null), player.Center, new Vector2(0.0f, 0.0f), ModContent.GetInstance<EHRWave>().Type, 0, 0.0f, Main.myPlayer, 0.0f, 0.0f);
-                (Main.projectile[index].ModProjectile as EHRWave).SetWaveValues(bonusHP);
+                player.GetModPlayer<EHR_Tracker>().used.Add(tag, bonusHP);
+            if (Main.netMode != NetmodeID.Server && !((EffectManager<Filter>)Filters.Scene)["HeartActivationRipple"].IsActive() && ModContent.GetInstance<EHR_Config>().EHRWaveEnabled) {
+                int index = Projectile.NewProjectile(new EntitySource_ItemUse(player, Item, null), player.Center, new Vector2(0.0f, 0.0f), ModContent.GetInstance<EHR_RippleEffect>().Type, 0, 0.0f, Main.myPlayer, 0.0f, 0.0f);
+                (Main.projectile[index].ModProjectile as EHR_RippleEffect).SetWaveValues(bonusHP);
             }
-            ModContent.GetInstance<EHRModSystem>().DeleteText();
+            ModContent.GetInstance<EHR_ModSystem>().DeleteText();
             return new bool?(true);
         }
 
@@ -187,22 +187,22 @@ namespace ElementalHeartsRevivedMod.src {
         public override void HoldItem(Player player) {
             if (!base.CanUseItem(player))
                 return;
-            ModContent.GetInstance<EHRModSystem>().SendEHRText("+" + bonusHP.ToString() + " " + maxHP, rareColor);
+            ModContent.GetInstance<EHR_ModSystem>().SendEHRText("+" + bonusHP.ToString() + " " + maxHP, rareColor);
         }
 
         public override void UpdateInventory(Player player) {
             if (player.HeldItem != Item)
-                ModContent.GetInstance<EHRModSystem>().DeleteText();
+                ModContent.GetInstance<EHR_ModSystem>().DeleteText();
             if (boss) {
                 //Guard clauses can sometimes be nice, but I feel like the whole mod should be structured better, so 
                 //guard clauses are not needed at all because that just encourages lazy organization.
 
-                if (ModContent.GetInstance<EHRConfig>().EHRBossEnabled)
+                if (ModContent.GetInstance<EHR_Config>().EHRBossEnabled)
                     return;
                 player.SellItem(Item, -1);
                 Item.TurnToAir();
             } else {
-                if (ModContent.GetInstance<EHRConfig>().EHRMaterialEnabled)
+                if (ModContent.GetInstance<EHR_Config>().EHRMaterialEnabled)
                     return;
                 player.SellItem(Item, -1);
                 Item.TurnToAir();
@@ -227,25 +227,25 @@ namespace ElementalHeartsRevivedMod.src {
         }
 
         public override void Update(ref float gravity, ref float maxFallSpeed) {
-            EHRModSystem system = ModContent.GetInstance<EHRModSystem>();
+            EHR_ModSystem system = ModContent.GetInstance<EHR_ModSystem>();
             if (system != null) {
                 system.DeleteText();
             }
         }
 
         public override void AddRecipes() {
-            if (!boss && ModContent.GetInstance<EHRConfig>().EHRMaterialEnabled && material != 0) {
+            if (!boss && ModContent.GetInstance<EHR_Config>().EHRMaterialEnabled && material != 0) {
                 Recipe heartRecipe = CreateRecipe().AddIngredient(
                     material,
-                    CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[material] * ModContent.GetInstance<EHRConfig>().EHRRecipeDifficulty
+                    CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[material] * ModContent.GetInstance<EHR_Config>().EHRRecipeDifficulty
                 );
-                if (ModContent.GetInstance<EHRConfig>().EHRCraftingStationRequired) {
+                if (ModContent.GetInstance<EHR_Config>().EHRCraftingStationRequired) {
                     heartRecipe.AddTile(station).Register();
                 } else {
                     heartRecipe.Register();
                 }
-                if (ModContent.GetInstance<EHRConfig>().EHRRecycleEnabled) {
-                    Recipe recipe = Recipe.Create(material, Math.Max(1, (int)(CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[material] * ModContent.GetInstance<EHRConfig>().EHRRecipeDifficulty / 1.25)));
+                if (ModContent.GetInstance<EHR_Config>().EHRRecycleEnabled) {
+                    Recipe recipe = Recipe.Create(material, Math.Max(1, (int)(CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[material] * ModContent.GetInstance<EHR_Config>().EHRRecipeDifficulty / 1.25)));
                     recipe.AddIngredient(this);
                     recipe.AddTile(TileID.Extractinator);
                     recipe.Register();
@@ -266,20 +266,20 @@ namespace ElementalHeartsRevivedMod.src {
 
             //if current heart is a boss heart and boss hearts are disabled
             if (boss) {
-                if (!ModContent.GetInstance<EHRConfig>().EHRBossEnabled) {
+                if (!ModContent.GetInstance<EHR_Config>().EHRBossEnabled) {
                     tooltipReturned += bossHeartsDisabled;
                     return tooltipReturned;
                 }
             }
 
             //if current heart is a crafted material heart and material hearts are disabled
-            else if (!ModContent.GetInstance<EHRConfig>().EHRMaterialEnabled) {
+            else if (!ModContent.GetInstance<EHR_Config>().EHRMaterialEnabled) {
                 tooltipReturned += materialHeartsDisabled;
                 return tooltipReturned;
             }
 
             //if the max hearts in the mod config are set to 1 (default behavior) and if player cannot use the item, then that means they've already used it
-            if (ModContent.GetInstance<EHRConfig>().EHRMaxHearts == 1) {
+            if (ModContent.GetInstance<EHR_Config>().EHRMaxHearts == 1) {
                 if (!CanUseItem(Main.LocalPlayer)) {
                     tooltipReturned += maxConsumed;
                     return tooltipReturned;
@@ -287,14 +287,14 @@ namespace ElementalHeartsRevivedMod.src {
             }
 
             //if max hearts in the config is greater than 1 then show the amount of hearts used out of the max amount of hearts that can be used
-            if (ModContent.GetInstance<EHRConfig>().EHRMaxHearts > 1) {
+            if (ModContent.GetInstance<EHR_Config>().EHRMaxHearts > 1) {
                 int usedHearts;
-                Main.LocalPlayer.GetModPlayer<EHRTracker>().used.TryGetValue(tag, out usedHearts);
+                Main.LocalPlayer.GetModPlayer<EHR_Tracker>().used.TryGetValue(tag, out usedHearts);
                 int amountUsed = usedHearts / bonusHP;
-                if (Main.LocalPlayer.GetModPlayer<EHRTracker>().used.ContainsKey(tag)) {
-                    tooltipReturned += "[" + amountUsed.ToString() + "/" + ModContent.GetInstance<EHRConfig>().EHRMaxHearts.ToString() + "]";
+                if (Main.LocalPlayer.GetModPlayer<EHR_Tracker>().used.ContainsKey(tag)) {
+                    tooltipReturned += "[" + amountUsed.ToString() + "/" + ModContent.GetInstance<EHR_Config>().EHRMaxHearts.ToString() + "]";
                 } else {
-                    tooltipReturned += "[0/" + ModContent.GetInstance<EHRConfig>().EHRMaxHearts.ToString() + "]";
+                    tooltipReturned += "[0/" + ModContent.GetInstance<EHR_Config>().EHRMaxHearts.ToString() + "]";
                 }
                 return tooltipReturned;
             }

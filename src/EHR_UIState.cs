@@ -4,7 +4,7 @@ using Terraria.UI;
 
 namespace ElementalHeartsRevivedMod.src
 {
-    public class EHRUIState : UIState
+    public class EHR_UIState : UIState
     {
         public override void OnInitialize()
         {

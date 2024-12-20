@@ -6,17 +6,17 @@ using Terraria.ModLoader;
 
 namespace ElementalHeartsRevivedMod.src
 {
-    internal class EHInfo : InfoDisplay
+    internal class EHR_Info : InfoDisplay
     {
 
-        public override bool Active() => ModContent.GetInstance<EHRConfig>().EHRInfoEnabled;
+        public override bool Active() => ModContent.GetInstance<EHR_Config>().EHRInfoEnabled;
 
         public override string DisplayValue(ref Color displayColor, ref Color displayShadowColor)/* tModPorter Suggestion: Set displayColor to InactiveInfoTextColor if your display value is "zero"/shows no valuable information */
         {
             int num = 0;
-            if (Main.LocalPlayer.GetModPlayer<EHRTracker>().used.Count > 1)
+            if (Main.LocalPlayer.GetModPlayer<EHR_Tracker>().used.Count > 1)
             {
-                foreach (KeyValuePair<string, int> keyValuePair in (IEnumerable<KeyValuePair<string, int>>)Main.LocalPlayer.GetModPlayer<EHRTracker>().used)
+                foreach (KeyValuePair<string, int> keyValuePair in Main.LocalPlayer.GetModPlayer<EHR_Tracker>().used)
                     num += keyValuePair.Value;
             }
             DefaultInterpolatedStringHandler interpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 1);

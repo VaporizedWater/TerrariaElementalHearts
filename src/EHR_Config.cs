@@ -3,7 +3,7 @@ using Terraria.ModLoader.Config;
 
 namespace ElementalHeartsRevivedMod.src
 {
-    public class EHRConfig : ModConfig
+    public class EHR_Config : ModConfig
     {
 
         private const string baseConfig = "$Mods.ElementalHeartsRevivedMod.Configs.EHRConfig.";

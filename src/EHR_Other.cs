@@ -25,19 +25,19 @@ namespace ElementalHeartsRevivedMod.src
 
         public override bool CanUseItem(Player player)
         {
-            return ModContent.GetInstance<EHRConfig>().EHRMaxHearts != 0 && !((EffectManager<Filter>)Filters.Scene)["EHRWave"].IsActive();
+            return ModContent.GetInstance<EHR_Config>().EHRMaxHearts != 0 && !((EffectManager<Filter>)Filters.Scene)["HeartActivationRipple"].IsActive();
         }
 
         public override bool? UseItem(Player player)
         {
-            player.GetModPlayer<EHRTracker>().used.Clear();
+            player.GetModPlayer<EHR_Tracker>().used.Clear();
             SoundEngine.PlaySound(SoundID.PlayerKilled, new Vector2?());
-            if (Main.netMode != NetmodeID.Server && !((EffectManager<Filter>)Filters.Scene)["EHRWave"].IsActive() && ModContent.GetInstance<EHRConfig>().EHRWaveEnabled)
+            if (Main.netMode != NetmodeID.Server && !((EffectManager<Filter>)Filters.Scene)["HeartActivationRipple"].IsActive() && ModContent.GetInstance<EHR_Config>().EHRWaveEnabled)
             {
-                int index = Projectile.NewProjectile(new EntitySource_ItemUse(player, Item, null), player.Center, new Vector2(0.0f, 0.0f), ModContent.GetInstance<EHRWave>().Type, 0, 0.0f, Main.myPlayer, 0.0f, 0.0f);
-                (Main.projectile[index].ModProjectile as EHRWave).SetWaveValues();
+                int index = Projectile.NewProjectile(new EntitySource_ItemUse(player, Item, null), player.Center, new Vector2(0.0f, 0.0f), ModContent.GetInstance<EHR_RippleEffect>().Type, 0, 0.0f, Main.myPlayer, 0.0f, 0.0f);
+                (Main.projectile[index].ModProjectile as EHR_RippleEffect).SetWaveValues();
             }
-            ModContent.GetInstance<EHRModSystem>().DeleteText();
+            ModContent.GetInstance<EHR_ModSystem>().DeleteText();
             return new bool?(true);
         }
 
@@ -57,14 +57,14 @@ namespace ElementalHeartsRevivedMod.src
         {
             if (!CanUseItem(player))
                 return;
-            ModContent.GetInstance<EHRModSystem>().SendEHRText("-" + LocalizationUtility.GetText("CommonItemTooltip.BonusHP"), Color.Gray);
+            ModContent.GetInstance<EHR_ModSystem>().SendEHRText("-" + LocalizationUtility.GetText("CommonItemTooltip.BonusHP"), Color.Gray);
         }
 
         public override void UpdateInventory(Player player)
         {
             if (player.HeldItem == Item)
                 return;
-            ModContent.GetInstance<EHRModSystem>().DeleteText();
+            ModContent.GetInstance<EHR_ModSystem>().DeleteText();
         }
 
         public override void AddRecipes()
@@ -96,7 +96,7 @@ namespace ElementalHeartsRevivedMod.src
 
         public override void Update(ref float gravity, ref float maxFallSpeed)
         {
-            ModContent.GetInstance<EHRModSystem>().DeleteText();
+            ModContent.GetInstance<EHR_ModSystem>().DeleteText();
         }
     }
 }
