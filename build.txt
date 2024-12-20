@@ -1,0 +1,3 @@
+displayName = Elemental Hearts Revived
+author = Goob
+version = 1.13

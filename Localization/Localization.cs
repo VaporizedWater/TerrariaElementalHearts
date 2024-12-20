@@ -1,0 +1,31 @@
+﻿using Terraria.Localization;
+
+/*
+ * This is a proxy class to provide one single method for abstracting the localization update away from the rest of the classes
+ * as much as possible.
+ * 
+ * It also allows me to name the method something that logically makes sense and isn't multiple confusing variations that all 
+ * pretty much do the same thing.
+ */
+
+#nullable enable
+namespace ElementalHeartsRevivedMod.Localization {
+    internal class Localization {
+        //private static Localization instance;
+        //private Localization() { }
+        //static Localization() {
+        //    instance = new Localization();
+        //}
+        //public static Localization Instance { get { return instance; } }
+
+        //provides a single method as a proxy for getting localized text with or without text replacements
+        public static string GetText(string key, string? replacementStr = null, object[]? replacements = null) {
+            if (replacementStr != null) {
+                return Language.GetTextValue("Mods.ElementalHeartsRevivedMod." + key, replacementStr);
+            } else if (replacements != null) {
+                return Language.GetTextValue("Mods.ElementalHeartsRevivedMod." + key, replacements);
+            }
+            return Language.GetTextValue("Mods.ElementalHeartsRevivedMod." + key);
+        }
+    }
+}

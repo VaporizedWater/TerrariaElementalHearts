@@ -1,0 +1,584 @@
+CommonItemTooltip: {
+	Disabled: "[Disabled]"
+	IncreaseLifeBy: Permanently increases maximum life by {0}
+	BossHeartsDisabled: "[Boss Hearts Disabled]"
+	MaterialHeartsDisabled: "[Material Hearts Disabled]"
+	MaxConsumed: "[Max Consumed]"
+	MaxHP: Max HP
+	BonusHP: Bonus HP
+	HeartNotUsed: "[Can Use]"
+}
+
+Items: {
+	Betsy: {
+		DisplayName: Betsy Heart
+		Tooltip: ""
+	}
+
+	BrainOfCthulhu: {
+		DisplayName: Brain Of Cthulhu Heart
+		Tooltip: ""
+	}
+
+	Deer: {
+		DisplayName: Deer Heart
+		Tooltip: ""
+	}
+
+	DukeFishron: {
+		DisplayName: Duke Fishron Heart
+		Tooltip: ""
+	}
+
+	EaterOfWorlds: {
+		DisplayName: Eater Of Worlds Heart
+		Tooltip: ""
+	}
+
+	EmpressOfLight: {
+		DisplayName: Empress Of Light Heart
+		Tooltip: ""
+	}
+
+	EyeOfCthulhu: {
+		DisplayName: Eye Of Cthulhu Heart
+		Tooltip: ""
+	}
+
+	FlyingDutchman: {
+		DisplayName: Flying Dutchman Heart
+		Tooltip: ""
+	}
+
+	Golem: {
+		DisplayName: Golem Heart
+		Tooltip: ""
+	}
+
+	KingSlime: {
+		DisplayName: King Slime Heart
+		Tooltip: ""
+	}
+
+	LunaticCultist: {
+		DisplayName: Lunatic Cultist Heart
+		Tooltip: ""
+	}
+
+	MartianSaucer: {
+		DisplayName: Martian Saucer Heart
+		Tooltip: ""
+	}
+
+	MoonLord: {
+		DisplayName: Moon Lord Heart
+		Tooltip: ""
+	}
+
+	Plantera: {
+		DisplayName: Plantera Heart
+		Tooltip: ""
+	}
+
+	QueenBee: {
+		DisplayName: Queen Bee Heart
+		Tooltip: ""
+	}
+
+	QueenSlime: {
+		DisplayName: Queen Slime Heart
+		Tooltip: ""
+	}
+
+	Skeletron: {
+		DisplayName: Skeletron Heart
+		Tooltip: ""
+	}
+
+	SoulOfFright: {
+		DisplayName: Fright Heart
+		Tooltip: ""
+	}
+
+	SoulOfMight: {
+		DisplayName: Might Heart
+		Tooltip: ""
+	}
+
+	SoulOfSight: {
+		DisplayName: Sight Heart
+		Tooltip: ""
+	}
+
+	Adamantite: {
+		DisplayName: Adamantite Heart
+		Tooltip: ""
+	}
+
+	Bubble: {
+		DisplayName: Bubble Heart
+		Tooltip: ""
+	}
+
+	Chlorophyte: {
+		DisplayName: Chlorophyte Heart
+		Tooltip: ""
+	}
+
+	Cobalt: {
+		DisplayName: Cobalt Heart
+		Tooltip: ""
+	}
+
+	Cog: {
+		DisplayName: Cog Heart
+		Tooltip: ""
+	}
+
+	Crystal: {
+		DisplayName: Crystal Heart
+		Tooltip: ""
+	}
+
+	CursedFlame: {
+		DisplayName: Cursed Flame Heart
+		Tooltip: ""
+	}
+
+	Discord: {
+		DisplayName: Discord Heart
+		Tooltip: ""
+	}
+
+	Ectoplasm: {
+		DisplayName: Ectoplasm Heart
+		Tooltip: ""
+	}
+
+	Flesh: {
+		DisplayName: Flesh Heart
+		Tooltip: ""
+	}
+
+	Flight: {
+		DisplayName: Flight Heart
+		Tooltip: ""
+	}
+
+	Horny: {
+		DisplayName: Horny Heart
+		Tooltip: ""
+	}
+
+	Ichor: {
+		DisplayName: Ichor Heart
+		Tooltip: ""
+	}
+
+	Lesion: {
+		DisplayName: Lesion Heart
+		Tooltip: ""
+	}
+
+	Light: {
+		DisplayName: Light Heart
+		Tooltip: ""
+	}
+
+	Luminite: {
+		DisplayName: Luminite Heart
+		Tooltip: ""
+	}
+
+	Mythril: {
+		DisplayName: Mythril Heart
+		Tooltip: ""
+	}
+
+	Night: {
+		DisplayName: Night Heart
+		Tooltip: ""
+	}
+
+	Orichalcum: {
+		DisplayName: Orichalcum Heart
+		Tooltip: ""
+	}
+
+	Palladium: {
+		DisplayName: Palladium Heart
+		Tooltip: ""
+	}
+
+	Pearlsand: {
+		DisplayName: Pearlsand Heart
+		Tooltip: ""
+	}
+
+	Pearlstone: {
+		DisplayName: Pearlstone Heart
+		Tooltip: ""
+	}
+
+	Pearlwood: {
+		DisplayName: Pearlwood Heart
+		Tooltip: ""
+	}
+
+	PinkIce: {
+		DisplayName: Pink Ice Heart
+		Tooltip: ""
+	}
+
+	Rainbow: {
+		DisplayName: Rainbow Heart
+		Tooltip: ""
+	}
+
+	SpookyWood: {
+		DisplayName: Spooky Wood Heart
+		Tooltip: ""
+	}
+
+	Titanium: {
+		DisplayName: Titanium Heart
+		Tooltip: ""
+	}
+
+	Amber: {
+		DisplayName: Amber Heart
+		Tooltip: ""
+	}
+
+	Amethyst: {
+		DisplayName: Amethyst Heart
+		Tooltip: ""
+	}
+
+	BorealWood: {
+		DisplayName: Boreal Wood Heart
+		Tooltip: ""
+	}
+
+	Cactus: {
+		DisplayName: Cactus Heart
+		Tooltip: ""
+	}
+
+	CandyCane: {
+		DisplayName: Candy Cane Heart
+		Tooltip: ""
+	}
+
+	Cloud: {
+		DisplayName: Cloud Heart
+		Tooltip: ""
+	}
+
+	Copper: {
+		DisplayName: Copper Heart
+		Tooltip: ""
+	}
+
+	Coralstone: {
+		DisplayName: Coralstone Heart
+		Tooltip: ""
+	}
+
+	Crimsand: {
+		DisplayName: Crimsand Heart
+		Tooltip: ""
+	}
+
+	Crimtane: {
+		DisplayName: Crimtane Heart
+		Tooltip: ""
+	}
+
+	Demonite: {
+		DisplayName: Demonite Heart
+		Tooltip: ""
+	}
+
+	Diamond: {
+		DisplayName: Diamond Heart
+		Tooltip: ""
+	}
+
+	Dirt: {
+		DisplayName: Dirt Heart
+		Tooltip: ""
+	}
+
+	Dynasty: {
+		DisplayName: Dynasty Heart
+		Tooltip: ""
+	}
+
+	Ebonsand: {
+		DisplayName: Ebonsand Heart
+		Tooltip: ""
+	}
+
+	Ebonstone: {
+		DisplayName: Ebonstone Heart
+		Tooltip: ""
+	}
+
+	Emerald: {
+		DisplayName: Emerald Heart
+		Tooltip: ""
+	}
+
+	Enchanted: {
+		DisplayName: Enchanted Heart
+		Tooltip: ""
+	}
+
+	Fossil: {
+		DisplayName: Fossil Heart
+		Tooltip: ""
+	}
+
+	Glass: {
+		DisplayName: Glass Heart
+		Tooltip: ""
+	}
+
+	Gold: {
+		DisplayName: Gold Heart
+		Tooltip: ""
+	}
+
+	Granite: {
+		DisplayName: Granite Heart
+		Tooltip: ""
+	}
+
+	Hay: {
+		DisplayName: Hay Heart
+		Tooltip: ""
+	}
+
+	Hellstone: {
+		DisplayName: Hellstone Heart
+		Tooltip: ""
+	}
+
+	Honey: {
+		DisplayName: Honey Heart
+		Tooltip: ""
+	}
+
+	Ice: {
+		DisplayName: Ice Heart
+		Tooltip: ""
+	}
+
+	Iron: {
+		DisplayName: Iron Heart
+		Tooltip: ""
+	}
+
+	Lead: {
+		DisplayName: Lead Heart
+		Tooltip: ""
+	}
+
+	LifeCrystal: {
+		DisplayName: Life Crystal Heart
+		Tooltip: ""
+		OptionalTip: Dedicated to AdamChromeE!
+	}
+
+	Marble: {
+		DisplayName: Marble Heart
+		Tooltip: ""
+	}
+
+	Meteorite: {
+		DisplayName: Meteorite Heart
+		Tooltip: ""
+	}
+
+	Mushroom: {
+		DisplayName: Mushroom Heart
+		Tooltip: ""
+	}
+
+	Obsidian: {
+		DisplayName: Obsidian Heart
+		Tooltip: ""
+	}
+
+	PalmWood: {
+		DisplayName: Palm Wood Heart
+		Tooltip: ""
+	}
+
+	Platinum: {
+		DisplayName: Platinum Heart
+		Tooltip: ""
+	}
+
+	Pumpkin: {
+		DisplayName: Pumpkin Heart
+		Tooltip: ""
+	}
+
+	PurpleIce: {
+		DisplayName: Purple Ice Heart
+		Tooltip: ""
+	}
+
+	RainCloud: {
+		DisplayName: Rain Cloud Heart
+		Tooltip: ""
+	}
+
+	RedIce: {
+		DisplayName: Red Ice Heart
+		Tooltip: ""
+	}
+
+	RichMahogany: {
+		DisplayName: Rich Mahogany Heart
+		Tooltip: ""
+	}
+
+	Ruby: {
+		DisplayName: Ruby Heart
+		Tooltip: ""
+	}
+
+	Sand: {
+		DisplayName: Sand Heart
+		Tooltip: ""
+	}
+
+	Sapphire: {
+		DisplayName: Sapphire Heart
+		Tooltip: ""
+	}
+
+	Shadewood: {
+		DisplayName: Shadewood Heart
+		Tooltip: ""
+	}
+
+	Silver: {
+		DisplayName: Silver Heart
+		Tooltip: ""
+	}
+
+	Slime: {
+		DisplayName: Slime Heart
+		Tooltip: ""
+	}
+
+	SnowCloud: {
+		DisplayName: Snow Cloud Heart
+		Tooltip: ""
+	}
+
+	Stone: {
+		DisplayName: Stone Heart
+		Tooltip: ""
+	}
+
+	Sunplate: {
+		DisplayName: Sunplate Heart
+		Tooltip: ""
+	}
+
+	Tin: {
+		DisplayName: Tin Heart
+		Tooltip: ""
+	}
+
+	Topaz: {
+		DisplayName: Topaz Heart
+		Tooltip: ""
+	}
+
+	Tungsten: {
+		DisplayName: Tungsten Heart
+		Tooltip: ""
+	}
+
+	Wood: {
+		DisplayName: Wood Heart
+		Tooltip: ""
+	}
+
+	HardHeart: {
+		DisplayName: Hard Heart
+		Tooltip: ""
+		OptionalTip: Destroys your love...
+	}
+}
+
+Projectiles.EHRWave.DisplayName: Shockwave
+
+Configs: {
+	EHRConfig: {
+		DisplayName: Elemental Hearts Revived Config
+
+		Headers: {
+			Basic: Basic Settings
+			DontTouch: Advanced Settings (Recomended: Do Not Touch.)
+		}
+
+		EHRInfoEnabled: {
+			Label: Show Bonus HP Info (Default: Off)
+			Tooltip: Similar to the compass, but it shows your Elemental Hearts buff stats.
+		}
+
+		EHRWaveEnabled: {
+			Label: Enable Consumption Wave (Default: On)
+			Tooltip: Toggle the beautiful effect. (In case you need to consume a lot in a short time?)
+		}
+
+		EHRRecycleEnabled: {
+			Label: Enable Heart Recycling (Default: On)
+			Tooltip: Recycle hearts at an extractinator for a fraction of its cost.
+		}
+
+		EHRMaxHearts: {
+			Label: Max Heart Consumption (Default: 1)
+			Tooltip: Changes the amount of times you can consume each heart.
+		}
+
+		EHRLovePower: {
+			Label: Love Power (Default: 2)
+			Tooltip: Changes the amount of bonus HP you recieve upon consumption.
+		}
+
+		EHRRecipeDifficulty: {
+			Label: Recipe Difficulty (Default: 1)
+			Tooltip: Changes the amount of recources you need to craft each heart.
+		}
+
+		EHRCraftingStationRequired: {
+			Label: Crafting Station Required (Default: On)
+			Tooltip: Allow hearts to be crafted without being near crafting stations.
+		}
+
+		EHRBossEnabled: {
+			Label: Enable Boss Hearts (Default: On)
+			Tooltip: Allow boss hearts to be crafted/used.
+		}
+
+		EHRMaterialEnabled: {
+			Label: Enable Material Hearts (Default: On)
+			Tooltip: Allow material hearts to be crafted/used.
+		}
+
+		RoamingLogsEnabled: {
+			Label: Enable Legacy Backup Logs (Recomended: Off)
+			Tooltip: Should only enable if you know what you are doing.
+		}
+	}
+}
+
+InfoDisplays.EHInfo.DisplayName: EHR Info
