@@ -11,14 +11,8 @@
 #nullable enable
 namespace ElementalHeartsRevivedMod.Localization {
     internal class Localization {
-        //private static Localization instance;
-        //private Localization() { }
-        //static Localization() {
-        //    instance = new Localization();
-        //}
-        //public static Localization Instance { get { return instance; } }
 
-        //provides a single method as a proxy for getting localized text with or without text replacements
+        /// <summary> provides a single method as a proxy for getting localized text with or without text replacements </summary>
         public static string GetText(string key, string? replacementStr = null, object[]? replacements = null) {
             if (replacementStr != null) {
                 return Language.GetTextValue("Mods.ElementalHeartsRevivedMod." + key, replacementStr);
