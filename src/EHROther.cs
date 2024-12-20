@@ -15,7 +15,7 @@ namespace ElementalHeartsRevivedMod.src
     public class HardHeart : ModItem
     {
         public string tag = nameof(HardHeart);
-        public string name = Localization.GetText("Items.HardHeart.DisplayName");
+        public string name = LocalizationUtility.GetText("Items.HardHeart.DisplayName");
         private bool tooltipCreated = false;
 
         public override string Texture
@@ -57,7 +57,7 @@ namespace ElementalHeartsRevivedMod.src
         {
             if (!CanUseItem(player))
                 return;
-            ModContent.GetInstance<EHRModSystem>().SendEHRText("-" + Localization.GetText("CommonItemTooltip.BonusHP"), Color.Gray);
+            ModContent.GetInstance<EHRModSystem>().SendEHRText("-" + LocalizationUtility.GetText("CommonItemTooltip.BonusHP"), Color.Gray);
         }
 
         public override void UpdateInventory(Player player)
@@ -90,7 +90,7 @@ namespace ElementalHeartsRevivedMod.src
             });
             if (tooltip != null)
             {
-                tooltip.Text = Localization.GetText("Items.HardHeart.OptionalTip");
+                tooltip.Text = LocalizationUtility.GetText("Items.HardHeart.OptionalTip");
             }
         }
 
