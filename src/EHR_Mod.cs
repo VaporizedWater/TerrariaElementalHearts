@@ -30,8 +30,8 @@ namespace ElementalHeartsRevivedMod.src
             EHRInterface = new UserInterface();
             EHRUIState = new EHR_UIState();
             EHRUIState.Activate();
-            Asset<Effect> shader =  ModContent.Request<Effect>("Assets/Effects/EHRWaveEffect", AssetRequestMode.ImmediateLoad);
-            Filters.Scene["EHR_Wave"] = new Filter(new ScreenShaderData(shader, "HeartActivationRipple"), EffectPriority.VeryHigh);
+            Asset<Effect> shader =  ModContent.Request<Effect>("ElementalHeartsRevivedMod/Assets/Effects/EHR_RippleEffect", AssetRequestMode.ImmediateLoad);
+            Filters.Scene["EHR_Wave"] = new Filter(new ScreenShaderData(shader, "EHR_RippleEffect"), EffectPriority.VeryHigh);
             Filters.Scene["EHR_Wave"].Load();
         }
 

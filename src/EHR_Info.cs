@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Terraria;
 using Terraria.ModLoader;
+using ElementalHeartsRevivedMod.lib;
 
 namespace ElementalHeartsRevivedMod.src
 {
     internal class EHR_Info : InfoDisplay
     {
 
-        public override bool Active() => ModContent.GetInstance<EHR_Config>().EHRInfoEnabled;
+        public override bool Active() => ModContent.GetInstance<Config>().EHRInfoEnabled;
 
         public override string DisplayValue(ref Color displayColor, ref Color displayShadowColor)/* tModPorter Suggestion: Set displayColor to InactiveInfoTextColor if your display value is "zero"/shows no valuable information */
         {

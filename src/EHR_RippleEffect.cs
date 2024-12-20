@@ -1,10 +1,12 @@
-﻿using System;
+﻿using ElementalHeartsRevivedMod.lib;
+using System;
+using System.Reflection.Metadata;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ElementalHeartsRevivedMod.Assets.Effects
+namespace ElementalHeartsRevivedMod
 {
     internal class EHR_RippleEffect : ModProjectile
     {
@@ -40,20 +42,20 @@ namespace ElementalHeartsRevivedMod.Assets.Effects
             if (Projectile.ai[0] == 1.0)
             {
                 Projectile.ai[0] = 2f;
-                if (Main.netMode != NetmodeID.Server && !((EffectManager<Filter>)Filters.Scene)[nameof(EHR_RippleEffect)].IsActive())
-                    Filters.Scene.Activate(nameof(EHR_RippleEffect), Projectile.Center, Array.Empty<object>()).GetShader().UseColor(rippleCount, rippleSize, rippleSpeed).UseTargetPosition(Projectile.Center);
+                if (Main.netMode != NetmodeID.Server && !((EffectManager<Filter>)Filters.Scene)[Constants.RippleEffectName].IsActive())
+                    Filters.Scene.Activate(Constants.RippleEffectName, Projectile.Center, Array.Empty<object>()).GetShader().UseColor(rippleCount, rippleSize, rippleSpeed).UseTargetPosition(Projectile.Center);
             }
-            if (Main.netMode == NetmodeID.Server || !((EffectManager<Filter>)Filters.Scene)[nameof(EHR_RippleEffect)].IsActive())
+            if (Main.netMode == NetmodeID.Server || !((EffectManager<Filter>)Filters.Scene)[Constants.RippleEffectName].IsActive())
                 return;
             float num = (333 - Projectile.timeLeft) / 90f;
-            ((EffectManager<Filter>)Filters.Scene)[nameof(EHR_RippleEffect)].GetShader().UseProgress(num).UseOpacity(distortStrength * (float)(1.0 - (double)num / 3.0));
+            ((EffectManager<Filter>)Filters.Scene)[Constants.RippleEffectName].GetShader().UseProgress(num).UseOpacity(distortStrength * (float)(1.0 - (double)num / 3.0));
         }
 
         public override void OnKill(int timeLeft)
         {
-            if (Main.netMode == NetmodeID.Server || !((EffectManager<Filter>)Filters.Scene)[nameof(EHR_RippleEffect)].IsActive())
+            if (Main.netMode == NetmodeID.Server || !((EffectManager<Filter>)Filters.Scene)[Constants.RippleEffectName].IsActive())
                 return;
-            ((EffectManager<Filter>)Filters.Scene)[nameof(EHR_RippleEffect)].Deactivate(Array.Empty<object>());
+            ((EffectManager<Filter>)Filters.Scene)[Constants.RippleEffectName].Deactivate(Array.Empty<object>());
         }
     }
 }

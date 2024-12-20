@@ -1,4 +1,4 @@
-﻿
+﻿using ElementalHeartsRevivedMod.lib;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -35,7 +35,7 @@ namespace ElementalHeartsRevivedMod.src
 
         public override void PostSavePlayer()
         {
-            if (!ModContent.GetInstance<EHR_Config>().RoamingLogsEnabled)
+            if (!ModContent.GetInstance<Config>().RoamingLogsEnabled)
                 return;
 
             
