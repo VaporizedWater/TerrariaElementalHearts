@@ -1,4 +1,5 @@
 ﻿using ElementalHeartsRevivedMod.Assets.Effects;
+using ElementalHeartsRevivedMod.Localization;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -120,22 +121,22 @@ namespace ElementalHeartsRevivedMod.src {
             this.isConsumable = isConsumable;
 
             //update localized tooltips
-            bonus = Localization.GetText("CommonItemTooltip.IncreaseLifeBy", bonusHP.ToString());
-            bossHeartsDisabled = Localization.GetText("CommonItemTooltip.BossHearsDisabled");
-            materialHeartsDisabled = Localization.GetText("CommonItemTooltip.MaterialHeartsDisabled");
-            maxConsumed = Localization.GetText("CommonItemTooltip.MaxConsumed");
-            maxHP = Localization.GetText("CommonItemTooltip.MaxHP");
-            heartNotUsed = Localization.GetText("CommonItemTooltip.HeartNotUsed");
+            bonus = LocalizationUtility.GetText("CommonItemTooltip.IncreaseLifeBy", bonusHP.ToString());
+            bossHeartsDisabled = LocalizationUtility.GetText("CommonItemTooltip.BossHearsDisabled");
+            materialHeartsDisabled = LocalizationUtility.GetText("CommonItemTooltip.MaterialHeartsDisabled");
+            maxConsumed = LocalizationUtility.GetText("CommonItemTooltip.MaxConsumed");
+            maxHP = LocalizationUtility.GetText("CommonItemTooltip.MaxHP");
+            heartNotUsed = LocalizationUtility.GetText("CommonItemTooltip.HeartNotUsed");
 
             // Not to be confused with the Tooltip, which automatically gets included above any additional text,
             // so this allows tooltip/flavor text to be ordered how I want it (down below in CalculateTooltip).
-            optionalTip = Localization.GetText("Items." + GetType().Name + ".OptionalTip");
+            optionalTip = LocalizationUtility.GetText("Items." + GetType().Name + ".OptionalTip");
             if (optionalTip.Contains("Mods.ElementalHeartsRevivedMod")) {
                 optionalTip = string.Empty;
             }
 
 
-            name = Localization.GetText("Items." + GetType().Name + ".DisplayName");
+            name = LocalizationUtility.GetText("Items." + GetType().Name + ".DisplayName");
         }
 
         public override string Texture => texturePath;
