@@ -1,5 +1,6 @@
-﻿using ElementalHeartsRevivedMod.Localization;
+﻿using ElementalHeartsRevivedMod.Assets.Effects;
 using ElementalHeartsRevivedMod.lib;
+using ElementalHeartsRevivedMod.Localization;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using Terraria;
@@ -25,14 +26,14 @@ namespace ElementalHeartsRevivedMod.src
 
         public override bool CanUseItem(Player player)
         {
-            return ModContent.GetInstance<Config>().EHRMaxHearts != 0 && !((EffectManager<Filter>)Filters.Scene)["HeartActivationRipple"].IsActive();
+            return ModContent.GetInstance<Config>().EHRMaxHearts != 0 && !((EffectManager<Filter>)Filters.Scene)[Constants.RippleEffectName].IsActive();
         }
 
         public override bool? UseItem(Player player)
         {
             player.GetModPlayer<EHR_Tracker>().used.Clear();
             SoundEngine.PlaySound(SoundID.PlayerKilled, new Vector2?());
-            if (Main.netMode != NetmodeID.Server && !((EffectManager<Filter>)Filters.Scene)["HeartActivationRipple"].IsActive() && ModContent.GetInstance<Config>().EHRWaveEnabled)
+            if (Main.netMode != NetmodeID.Server && !((EffectManager<Filter>)Filters.Scene)[Constants.RippleEffectName].IsActive() && ModContent.GetInstance<Config>().EHRWaveEnabled)
             {
                 int index = Projectile.NewProjectile(new EntitySource_ItemUse(player, Item, null), player.Center, new Vector2(0.0f, 0.0f), ModContent.GetInstance<EHR_RippleEffect>().Type, 0, 0.0f, Main.myPlayer, 0.0f, 0.0f);
                 (Main.projectile[index].ModProjectile as EHR_RippleEffect).SetWaveValues();
@@ -78,7 +79,7 @@ namespace ElementalHeartsRevivedMod.src
         {
             if (!tooltipCreated)
             {
-                TooltipLine tooltipLine = new TooltipLine(Mod, tag, name);
+                TooltipLine tooltipLine = new(Mod, tag, name);
                 tooltips.Add(tooltipLine);
                 tooltipCreated = true;
             }

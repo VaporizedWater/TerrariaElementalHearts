@@ -6,15 +6,18 @@ A revival of the classic mod - Elemental Hearts - adds in numerous consumable li
 	Spreads with progression.
 	Simply complex.
 
-Note: This mod functionally changes nothing from the original.
-
-Additions: 
+Additions:
 	Full localization support for all text contained within this mod.
 	Fixed Journey Mode research costs of default items being set to 1.
 	Config option: Crafting station required toggle, enabled by default.
 
 Planned Additions:
 	Checklist UI for showing which hearts have been used.
+	Consumable that disables effects of hearts earned temporarily with either a toggle or timer.
+
+Recently updated to 1.4.4, and currently doing a complete overhaul of the entire mod before adding the checklist UI. This will include how the mod saves data.
+However, there is no need to worry about old saves, I will keep the legacy loading/saving options in and will provide a config option to turn this on/off.
+For this version of the mod (1.14), there will be no config option until I finish the overhaul, and all saving and loading will function as usual.
 
 Original Elemental Hearts: https://steamcommunity.com/sharedfiles/filedetails/?id=2666581077
 Discord Link (Same as Original Elemental Hearts): https://discord.gg/WHMg38mXs8

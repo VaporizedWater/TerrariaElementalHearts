@@ -12,10 +12,12 @@ namespace ElementalHeartsRevivedMod.src
 
         public void CreateText(string text, Color color)
         {
-            UIText uiText = new UIText(text, 1f, false);
-            uiText.HAlign = 0.83f;
-            uiText.VAlign = 0.02f;
-            uiText.TextColor = color;
+            UIText uiText = new(text, 1f, false)
+            {
+                HAlign = 0.83f,
+                VAlign = 0.02f,
+                TextColor = color
+            };
             Append(uiText);
         }
     }

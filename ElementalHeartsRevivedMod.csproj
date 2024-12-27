@@ -1,14 +1,13 @@
-
 <Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="..\tModLoader.targets" />
-  <PropertyGroup>
-    <AssemblyName>ElementalHeartsRevivedMod</AssemblyName>
-    <LangVersion>latest</LangVersion>
-  </PropertyGroup>
-  <ItemGroup>
-    <AdditionalFiles Remove="OriginalElementalHearts\**" />
-    <Compile Remove="OriginalElementalHearts\**" />
-    <EmbeddedResource Remove="OriginalElementalHearts\**" />
-    <None Remove="OriginalElementalHearts\**" />
-  </ItemGroup>
+
+	<!-- Import tModLoader mod properties -->
+	<Import Project="..\tModLoader.targets" />
+
+	<!-- General -->
+	<PropertyGroup>
+		
+	</PropertyGroup>
+
+	<!-- References -->
+
 </Project>

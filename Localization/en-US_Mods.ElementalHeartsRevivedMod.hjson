@@ -518,7 +518,10 @@ Items: {
 	}
 }
 
-Projectiles.EHRWave.DisplayName: Shockwave
+Projectiles: {
+	EHRWave.DisplayName: Shockwave
+	EHR_RippleEffect.DisplayName: E H R_ Ripple Effect
+}
 
 Configs: {
 	EHRConfig: {
@@ -579,6 +582,11 @@ Configs: {
 			Tooltip: Should only enable if you know what you are doing.
 		}
 	}
+
+	Config.DisplayName: Config
 }
 
-InfoDisplays.EHInfo.DisplayName: EHR Info
+InfoDisplays: {
+	EHInfo.DisplayName: EHR Info
+	EHR_Info.DisplayName: E H R_ Info
+}

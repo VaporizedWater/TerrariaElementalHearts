@@ -1,5 +1,6 @@
-﻿using ElementalHeartsRevivedMod.Localization;
+﻿using ElementalHeartsRevivedMod.Assets.Effects;
 using ElementalHeartsRevivedMod.lib;
+using ElementalHeartsRevivedMod.Localization;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using Terraria.GameContent.Creative;
 using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
+
 
 namespace ElementalHeartsRevivedMod.src {
     public class EHR_Base : ModItem {
@@ -146,7 +148,7 @@ namespace ElementalHeartsRevivedMod.src {
                     return false;
             } else if (!ModContent.GetInstance<Config>().EHRMaterialEnabled)
                 return false;
-            if (ModContent.GetInstance<Config>().EHRMaxHearts == 0 || ((EffectManager<Filter>)Filters.Scene)["HeartActivationRipple"].IsActive())
+            if (ModContent.GetInstance<Config>().EHRMaxHearts == 0 || ((EffectManager<Filter>)Filters.Scene)[Constants.RippleEffectName].IsActive())
                 return false;
             return !player.GetModPlayer<EHR_Tracker>().used.ContainsKey(tag) || player.GetModPlayer<EHR_Tracker>().used[tag] < ModContent.GetInstance<Config>().EHRMaxHearts * bonusHP;
         }
@@ -160,7 +162,7 @@ namespace ElementalHeartsRevivedMod.src {
                 player.GetModPlayer<EHR_Tracker>().used[tag] += bonusHP;
             else
                 player.GetModPlayer<EHR_Tracker>().used.Add(tag, bonusHP);
-            if (Main.netMode != NetmodeID.Server && !((EffectManager<Filter>)Filters.Scene)["HeartActivationRipple"].IsActive() && ModContent.GetInstance<Config>().EHRWaveEnabled) {
+            if (Main.netMode != NetmodeID.Server && !((EffectManager<Filter>)Filters.Scene)[Constants.RippleEffectName].IsActive() && ModContent.GetInstance<Config>().EHRWaveEnabled) {
                 int index = Projectile.NewProjectile(new EntitySource_ItemUse(player, Item, null), player.Center, new Vector2(0.0f, 0.0f), ModContent.GetInstance<EHR_RippleEffect>().Type, 0, 0.0f, Main.myPlayer, 0.0f, 0.0f);
                 (Main.projectile[index].ModProjectile as EHR_RippleEffect).SetWaveValues(bonusHP);
             }
@@ -210,7 +212,7 @@ namespace ElementalHeartsRevivedMod.src {
 
         public override void ModifyTooltips(List<TooltipLine> tooltips) {
             if (!tooltipCreated) {
-                TooltipLine tooltipLine = new TooltipLine(Mod, tag, name);
+                TooltipLine tooltipLine = new(Mod, tag, name);
                 tooltips.Add(tooltipLine);
                 tooltipCreated = true;
             }
@@ -227,9 +229,7 @@ namespace ElementalHeartsRevivedMod.src {
 
         public override void Update(ref float gravity, ref float maxFallSpeed) {
             EHR_ModSystem system = ModContent.GetInstance<EHR_ModSystem>();
-            if (system != null) {
-                system.DeleteText();
-            }
+            system?.DeleteText();
         }
 
         public override void AddRecipes() {
@@ -287,8 +287,7 @@ namespace ElementalHeartsRevivedMod.src {
 
             //if max hearts in the config is greater than 1 then show the amount of hearts used out of the max amount of hearts that can be used
             if (ModContent.GetInstance<Config>().EHRMaxHearts > 1) {
-                int usedHearts;
-                Main.LocalPlayer.GetModPlayer<EHR_Tracker>().used.TryGetValue(tag, out usedHearts);
+                Main.LocalPlayer.GetModPlayer<EHR_Tracker>().used.TryGetValue(tag, out int usedHearts);
                 int amountUsed = usedHearts / bonusHP;
                 if (Main.LocalPlayer.GetModPlayer<EHR_Tracker>().used.ContainsKey(tag)) {
                     tooltipReturned += "[" + amountUsed.ToString() + "/" + ModContent.GetInstance<Config>().EHRMaxHearts.ToString() + "]";

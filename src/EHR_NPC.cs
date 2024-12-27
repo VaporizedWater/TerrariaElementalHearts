@@ -6,22 +6,12 @@ using Terraria.ModLoader;
 
 namespace ElementalHeartsRevivedMod.src
 {
-    public abstract class EHR_NPC : GlobalNPC
+    public abstract class EHR_NPC(int npcType = -1, int item = -1, bool shopLoot = true, bool isEaterOfWorlds = false) : GlobalNPC
     {
-        private readonly int npcType;
-        private readonly int item;
-        private readonly bool shopLoot;
-        private readonly int killsRequired;
-        private readonly bool isEaterOfWorlds;
-
-        public EHR_NPC(int npcType = -1, int item = -1, bool shopLoot = true, int killsRequired = 1, bool isEaterOfWorlds = false)
-        {
-            this.npcType = npcType;
-            this.item = item;
-            this.shopLoot = shopLoot;
-            this.killsRequired = killsRequired;
-            this.isEaterOfWorlds = isEaterOfWorlds;
-        }
+        private readonly int npcType = npcType;
+        private readonly int item = item;
+        private readonly bool shopLoot = shopLoot;
+        private readonly bool isEaterOfWorlds = isEaterOfWorlds;
 
         public virtual void SetupShop(int type, Chest shop, ref int nextSlot)
         {
@@ -34,7 +24,7 @@ namespace ElementalHeartsRevivedMod.src
 
         public override void OnKill(NPC npc)
         {
-            if (isEaterOfWorlds && npc.boss && Array.IndexOf(array: new int[] { NPCID.EaterofWorldsTail, NPCID.EaterofWorldsHead, NPCID.EaterofWorldsBody }, npc.type) > -1)
+            if (isEaterOfWorlds && npc.boss && Array.IndexOf(array: [NPCID.EaterofWorldsTail, NPCID.EaterofWorldsHead, NPCID.EaterofWorldsBody], npc.type) > -1)
             {
                 Item.NewItem(null, npc.position, item, 1, false, 0, false, false);
             }
