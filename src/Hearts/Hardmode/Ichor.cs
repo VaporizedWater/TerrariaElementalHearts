@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
-    public class Ichor : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
+{
+    public class Ichor : Heart_Base, HardmodeHeart {
         public Ichor()
-          : base(2, TileID.CrystalBall, 1332) {
+          : base(TileID.CrystalBall, 1332) {
         }
     }
 }

@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
-    public class Orichalcum : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
+{
+    public class Orichalcum : Heart_Base, HardmodeHeart {
         public Orichalcum()
-          : base(2, TileID.MythrilAnvil, 1105) {
+          : base(TileID.MythrilAnvil, 1105) {
         }
     }
 }

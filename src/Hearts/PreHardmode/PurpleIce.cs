@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
-    public class PurpleIce : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
+{
+    public class PurpleIce : Heart_Base, PreHardmodeHeart {
         public PurpleIce()
-          : base(4, TileID.IceMachine, 833) {
+          : base(TileID.IceMachine, 833) {
         }
     }
 }

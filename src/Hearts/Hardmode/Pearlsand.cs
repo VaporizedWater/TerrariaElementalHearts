@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
-    public class Pearlsand : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
+{
+    public class Pearlsand : Heart_Base, HardmodeHeart {
         public Pearlsand()
-          : base(2, TileID.HeavyWorkBench, 408) {
+          : base(TileID.HeavyWorkBench, 408) {
         }
     }
 }

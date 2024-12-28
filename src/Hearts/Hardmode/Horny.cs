@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
-    public class Horny : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
+{
+    public class Horny : Heart_Base, HardmodeHeart {
         public Horny()
-          : base(2, TileID.MythrilAnvil, 3771) {
+          : base(TileID.MythrilAnvil, 3771) {
         }
     }
 }

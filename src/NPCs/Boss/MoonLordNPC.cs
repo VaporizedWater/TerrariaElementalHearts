@@ -1,10 +1,11 @@
 ﻿using ElementalHeartsRevivedMod.src.Hearts.Boss;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace ElementalHeartsRevivedMod.src.NPCs.Boss {
     public class MoonLordNPC : NPC_Base {
         public MoonLordNPC()
-          : base(398, ModContent.ItemType<MoonLord>(), false) {
+          : base(NPCID.MoonLordCore, ModContent.ItemType<MoonLord>(), false) {
         }
     }
 }

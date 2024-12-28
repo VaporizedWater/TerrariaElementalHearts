@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
-    public class Ruby : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
+{
+    public class Ruby : Heart_Base, PreHardmodeHeart {
         public Ruby()
-          : base(4, TileID.TreeRuby, 178) {
+          : base(TileID.TreeRuby, 178) {
         }
     }
 }

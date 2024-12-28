@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
-    public class Pumpkin : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
+{
+    public class Pumpkin : Heart_Base, PreHardmodeHeart {
         public Pumpkin()
-          : base(4, TileID.Sawmill, 1725) {
+          : base(TileID.Sawmill, 1725) {
 
         }
     }

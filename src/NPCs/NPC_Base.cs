@@ -5,11 +5,10 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace ElementalHeartsRevivedMod.src.NPCs {
-    public abstract class NPC_Base(int npcType = -1, int item = -1, bool shopLoot = true, bool isEaterOfWorlds = false) : GlobalNPC {
+    public abstract class NPC_Base(int npcType = -1, int item = -1, bool shopLoot = true) : GlobalNPC {
         private readonly int npcType = npcType;
         private readonly int item = item;
         private readonly bool shopLoot = shopLoot;
-        private readonly bool isEaterOfWorlds = isEaterOfWorlds;
 
         public virtual void SetupShop(int type, Chest shop, ref int nextSlot) {
             if (type != npcType || !shopLoot)
@@ -20,15 +19,17 @@ namespace ElementalHeartsRevivedMod.src.NPCs {
         }
 
         public override void OnKill(NPC npc) {
-            if (isEaterOfWorlds && npc.boss && Array.IndexOf(array: [NPCID.EaterofWorldsTail, NPCID.EaterofWorldsHead, NPCID.EaterofWorldsBody], npc.type) > -1) {
-                Item.NewItem(null, npc.position, item, 1, false, 0, false, false);
+            if (Array.IndexOf([NPCID.EaterofWorldsTail, NPCID.EaterofWorldsHead, NPCID.EaterofWorldsBody], npc.type) > -1) {
+                Item.NewItem(null, npc.position, item);
             }
+            base.OnKill(npc);
         }
 
         public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot) {
             if (npc.type != npcType || shopLoot)
                 return;
-            npcLoot.Add(ItemDropRule.Common(item, 1, 1, 1));
+            npcLoot.Add(ItemDropRule.Common(item));
+            base.ModifyNPCLoot(npc, npcLoot);
         }
     }
 }

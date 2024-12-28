@@ -1,7 +1,10 @@
-﻿namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
-    public class Bubble : Heart_Base {
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
+{
+    public class Bubble : Heart_Base, HardmodeHeart {
         public Bubble()
-          : base(2, val: 1000000) {
+          : base(coinCost: 1000000) {
         }
     }
 }

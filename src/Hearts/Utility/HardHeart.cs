@@ -1,8 +1,8 @@
 ﻿using ElementalHeartsRevivedMod.Assets.Effects;
 using ElementalHeartsRevivedMod.lib;
+using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
 using ElementalHeartsRevivedMod.Localization;
 using Microsoft.Xna.Framework;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -12,8 +12,8 @@ using Terraria.ModLoader;
 
 
 namespace ElementalHeartsRevivedMod.src.Hearts.Utility {
-    public class HardHeart : Heart_Base {
-        public HardHeart() : base(3) {
+    public class HardHeart : Heart_Base, UtilityHeart {
+        public HardHeart() : base() {
             name = LocalizationUtility.GetText("Items.HardHeart.DisplayName");
             tooltipCreated = false;
         }
@@ -52,25 +52,13 @@ namespace ElementalHeartsRevivedMod.src.Hearts.Utility {
         }
 
         public override void AddRecipes() {
-            Recipe recipe1 = Recipe.Create(ModContent.ItemType<HardHeart>(), 1);
-            recipe1.AddTile(TileID.DemonAltar);
+            Recipe recipe1 = Recipe.Create(ModContent.ItemType<HardHeart>());
+            recipe1.AddTile(TileID.DemonAltar).Register();
             recipe1.Register();
         }
 
-        public override void ModifyTooltips(List<TooltipLine> tooltips) {
-            if (!tooltipCreated) {
-                TooltipLine tooltipLine = new(Mod, tag, name);
-                tooltips.Add(tooltipLine);
-                tooltipCreated = true;
-            }
-            if (!tooltipCreated)
-                return;
-            TooltipLine tooltip = tooltips.Find(ttl => {
-                return ttl.Name == tag;
-            });
-            if (tooltip != null) {
-                tooltip.Text = LocalizationUtility.GetText("Items.HardHeart.OptionalTip");
-            }
+        protected override void ModifyTooltip(TooltipLine tooltip) {
+            tooltip.Text = LocalizationUtility.GetText("Items.HardHeart.OptionalTip");
         }
     }
 }

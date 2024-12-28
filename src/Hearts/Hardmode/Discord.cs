@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
-    public class Discord : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
+{
+    public class Discord : Heart_Base, HardmodeHeart {
         public Discord()
-          : base(2, TileID.DemonAltar, 1326) {
+          : base(TileID.DemonAltar, 1326) {
         }
     }
 }

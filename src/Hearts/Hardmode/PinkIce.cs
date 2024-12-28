@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
-    public class PinkIce : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
+{
+    public class PinkIce : Heart_Base, HardmodeHeart {
         public PinkIce()
-          : base(2, TileID.IceMachine, 834) {
+          : base(TileID.IceMachine, 834) {
         }
     }
 }

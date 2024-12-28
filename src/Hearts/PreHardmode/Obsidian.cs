@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
-    public class Obsidian : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
+{
+    public class Obsidian : Heart_Base, PreHardmodeHeart {
         public Obsidian()
-          : base(4, TileID.Hellforge, 173) {
+          : base(TileID.Hellforge, 173) {
         }
     }
 }

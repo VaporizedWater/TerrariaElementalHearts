@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
-    public class Chlorophyte : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
+{
+    public class Chlorophyte : Heart_Base, HardmodeHeart {
         public Chlorophyte()
-          : base(2, TileID.MythrilAnvil, 947) {
+          : base(TileID.MythrilAnvil, 947) {
         }
     }
 }

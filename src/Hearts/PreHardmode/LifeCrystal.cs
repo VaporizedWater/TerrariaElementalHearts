@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
-    public class LifeCrystal : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
+{
+    public class LifeCrystal : Heart_Base, PreHardmodeHeart {
         public LifeCrystal()
-          : base(4, TileID.DemonAltar, 29, 4) {
+          : base(TileID.DemonAltar, 29, 4) {
         }
     }
 }

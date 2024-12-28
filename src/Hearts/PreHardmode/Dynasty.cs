@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
-    public class Dynasty : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
+{
+    public class Dynasty : Heart_Base, PreHardmodeHeart {
         public Dynasty()
-          : base(4, TileID.Sawmill, 2260) {
+          : base(TileID.Sawmill, 2260) {
         }
     }
 }

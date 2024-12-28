@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
-    public class Topaz : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
+{
+    public class Topaz : Heart_Base, PreHardmodeHeart {
         public Topaz()
-          : base(4, TileID.TreeTopaz, 180) {
+          : base(TileID.TreeTopaz, 180) {
 
         }
     }

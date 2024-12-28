@@ -1,7 +1,10 @@
-﻿namespace ElementalHeartsRevivedMod.src.Hearts.Boss {
-    public class BrainOfCthulhu : Heart_Base {
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+
+namespace ElementalHeartsRevivedMod.src.Hearts.Boss
+{
+    public class BrainOfCthulhu : Heart_Base, BossHeart {
         public BrainOfCthulhu()
-          : base(1, boss: true) {
+          : base() {
         }
     }
 }

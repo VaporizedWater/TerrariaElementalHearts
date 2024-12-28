@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
-    public class Flight : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
+{
+    public class Flight : Heart_Base, HardmodeHeart {
         public Flight()
-          : base(2, TileID.MythrilAnvil, 575) {
+          : base(TileID.MythrilAnvil, 575) {
         }
     }
 }

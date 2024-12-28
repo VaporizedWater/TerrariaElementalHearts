@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
-    public class Sapphire : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
+{
+    public class Sapphire : Heart_Base, PreHardmodeHeart {
         public Sapphire()
-          : base(4, TileID.TreeSapphire, 177) {
+          : base(TileID.TreeSapphire, 177) {
         }
     }
 }

@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
-    public class Glass : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
+{
+    public class Glass : Heart_Base, PreHardmodeHeart {
         public Glass()
-          : base(4, TileID.GlassKiln, 170) {
+          : base(TileID.GlassKiln, 170) {
         }
     }
 }

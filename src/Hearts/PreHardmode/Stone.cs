@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
-    public class Stone : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
+{
+    public class Stone : Heart_Base, PreHardmodeHeart {
         public Stone()
-          : base(4, TileID.Furnaces, 3) {
+          : base(TileID.Furnaces, 3) {
 
         }
     }

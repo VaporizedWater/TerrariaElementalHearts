@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
-    public class Amber : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
+{
+    public class Amber : Heart_Base, PreHardmodeHeart {
         public Amber()
-          : base(4, TileID.TreeAmber, 999) {
+          : base(TileID.TreeAmber, 999) {
         }
     }
 }

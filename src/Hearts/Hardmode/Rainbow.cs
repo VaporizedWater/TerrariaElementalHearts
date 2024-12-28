@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
-    public class Rainbow : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
+{
+    public class Rainbow : Heart_Base, HardmodeHeart {
         public Rainbow()
-          : base(2, TileID.Anvils, 662, rainbowEffect: true) {
+          : base(TileID.Anvils, 662, rainbowEffect: true) {
         }
     }
 }

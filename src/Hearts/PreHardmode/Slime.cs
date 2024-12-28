@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
-    public class Slime : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
+{
+    public class Slime : Heart_Base, PreHardmodeHeart {
         public Slime()
-          : base(4, TileID.Solidifier, 23) {
+          : base(TileID.Solidifier, 23) {
         }
     }
 }

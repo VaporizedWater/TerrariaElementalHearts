@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
-    public class Sunplate : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
+{
+    public class Sunplate : Heart_Base, PreHardmodeHeart {
         public Sunplate()
-          : base(4, TileID.SkyMill, 824) {
+          : base(TileID.SkyMill, 824) {
         }
     }
 }

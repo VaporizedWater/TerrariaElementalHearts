@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
-    public class SpookyWood : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
+{
+    public class SpookyWood : Heart_Base, HardmodeHeart {
         public SpookyWood()
-          : base(2, TileID.Sawmill, 1729) {
+          : base(TileID.Sawmill, 1729) {
         }
     }
 }

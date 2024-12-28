@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
-    public class Luminite : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
+{
+    public class Luminite : Heart_Base, HardmodeHeart {
         public Luminite()
-          : base(2, TileID.LunarCraftingStation, 3460) {
+          : base(TileID.LunarCraftingStation, 3460) {
         }
     }
 }

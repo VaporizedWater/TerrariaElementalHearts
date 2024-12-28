@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
-    public class CandyCane : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
+{
+    public class CandyCane : Heart_Base, PreHardmodeHeart {
         public CandyCane()
-          : base(4, TileID.WorkBenches, 586) {
+          : base(TileID.WorkBenches, 586) {
         }
     }
 }

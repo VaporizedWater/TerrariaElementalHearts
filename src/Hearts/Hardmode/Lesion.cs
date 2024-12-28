@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
-    public class Lesion : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
+{
+    public class Lesion : Heart_Base, HardmodeHeart {
         public Lesion()
-          : base(2, TileID.LesionStation, 3955) {
+          : base(TileID.LesionStation, 3955) {
         }
     }
 }

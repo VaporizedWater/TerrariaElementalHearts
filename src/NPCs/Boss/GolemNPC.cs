@@ -1,10 +1,11 @@
 ﻿using ElementalHeartsRevivedMod.src.Hearts.Boss;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace ElementalHeartsRevivedMod.src.NPCs.Boss {
     public class GolemNPC : NPC_Base {
         public GolemNPC()
-          : base(245, ModContent.ItemType<Golem>(), false) {
+          : base(NPCID.Golem, ModContent.ItemType<Golem>(), false) {
         }
     }
 }

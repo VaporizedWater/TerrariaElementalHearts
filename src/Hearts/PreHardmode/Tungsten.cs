@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
-    public class Tungsten : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
+{
+    public class Tungsten : Heart_Base, PreHardmodeHeart {
         public Tungsten()
-          : base(4, TileID.Furnaces, 701) {
+          : base(TileID.Furnaces, 701) {
         }
     }
 }

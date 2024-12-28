@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
-    public class Flesh : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
+{
+    public class Flesh : Heart_Base, HardmodeHeart {
         public Flesh()
-          : base(2, TileID.FleshCloningVat, 763) {
+          : base(TileID.FleshCloningVat, 763) {
         }
     }
 }

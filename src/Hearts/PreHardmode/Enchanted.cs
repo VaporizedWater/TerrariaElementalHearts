@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
-    public class Enchanted : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
+{
+    public class Enchanted : Heart_Base, PreHardmodeHeart {
         public Enchanted()
-          : base(4, TileID.DemonAltar, 989) {
+          : base(TileID.DemonAltar, 989) {
         }
     }
 }

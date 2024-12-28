@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
-    public class Ectoplasm : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
+{
+    public class Ectoplasm : Heart_Base, HardmodeHeart {
         public Ectoplasm()
-          : base(2, TileID.CrystalBall, 1508) {
+          : base(TileID.CrystalBall, 1508) {
         }
     }
 }

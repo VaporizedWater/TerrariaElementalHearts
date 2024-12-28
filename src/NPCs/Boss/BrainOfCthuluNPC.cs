@@ -1,10 +1,11 @@
 ﻿using ElementalHeartsRevivedMod.src.Hearts.Boss;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace ElementalHeartsRevivedMod.src.NPCs.Boss {
     public class BrainOfCthulhuNPC : NPC_Base {
         public BrainOfCthulhuNPC()
-          : base(266, ModContent.ItemType<BrainOfCthulhu>(), false) {
+          : base(NPCID.BrainofCthulhu, ModContent.ItemType<BrainOfCthulhu>(), false) {
         }
     }
 }

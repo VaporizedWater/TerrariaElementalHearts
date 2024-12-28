@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
-    public class Palladium : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
+{
+    public class Palladium : Heart_Base, HardmodeHeart {
         public Palladium()
-          : base(2, TileID.Furnaces, 1104) {
+          : base(TileID.Furnaces, 1104) {
         }
     }
 }

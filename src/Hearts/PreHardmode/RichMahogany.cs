@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
-    public class RichMahogany : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
+{
+    public class RichMahogany : Heart_Base, PreHardmodeHeart {
         public RichMahogany()
-          : base(4, TileID.Sawmill, 620) {
+          : base(TileID.Sawmill, 620) {
         }
     }
 }

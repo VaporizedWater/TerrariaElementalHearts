@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
-    public class Amethyst : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
+{
+    public class Amethyst : Heart_Base, PreHardmodeHeart {
         public Amethyst()
-          : base(4, TileID.TreeAmethyst, 181) {
+          : base(TileID.TreeAmethyst, 181) {
         }
     }
 }

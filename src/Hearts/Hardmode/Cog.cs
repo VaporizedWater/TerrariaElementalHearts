@@ -1,7 +1,10 @@
-﻿namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
-    public class Cog : Heart_Base {
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
+{
+    public class Cog : Heart_Base, HardmodeHeart {
         public Cog()
-          : base(2, val: 1000000) {
+          : base(coinCost: 1000000) {
         }
     }
 }

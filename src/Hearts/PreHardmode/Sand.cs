@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
-    public class Sand : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
+{
+    public class Sand : Heart_Base, PreHardmodeHeart {
         public Sand()
-          : base(4, TileID.HeavyWorkBench, 169) {
+          : base(TileID.HeavyWorkBench, 169) {
         }
     }
 }

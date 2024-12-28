@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
-    public class Night : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
+{
+    public class Night : Heart_Base, HardmodeHeart {
         public Night()
-          : base(2, TileID.MythrilAnvil, 521) {
+          : base(TileID.MythrilAnvil, 521) {
         }
     }
 }

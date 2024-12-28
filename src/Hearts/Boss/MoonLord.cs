@@ -1,7 +1,10 @@
-﻿namespace ElementalHeartsRevivedMod.src.Hearts.Boss {
-    public class MoonLord : Heart_Base {
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+
+namespace ElementalHeartsRevivedMod.src.Hearts.Boss
+{
+    public class MoonLord : Heart_Base, BossHeart {
         public MoonLord()
-          : base(1, boss: true) {
+          : base() {
         }
     }
 }

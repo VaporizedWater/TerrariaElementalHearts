@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
-    public class Cobalt : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
+{
+    public class Cobalt : Heart_Base, HardmodeHeart {
         public Cobalt()
-          : base(2, TileID.Furnaces, 364) {
+          : base(TileID.Furnaces, 364) {
         }
     }
 }

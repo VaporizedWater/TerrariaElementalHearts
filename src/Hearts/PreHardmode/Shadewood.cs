@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
-    public class Shadewood : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
+{
+    public class Shadewood : Heart_Base, PreHardmodeHeart {
         public Shadewood()
-          : base(4, TileID.Sawmill, 911) {
+          : base(TileID.Sawmill, 911) {
         }
     }
 }

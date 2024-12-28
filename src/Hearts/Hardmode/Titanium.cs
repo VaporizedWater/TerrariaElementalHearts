@@ -1,9 +1,11 @@
-﻿using Terraria.ID;
+﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
-    public class Titanium : Heart_Base {
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
+{
+    public class Titanium : Heart_Base, HardmodeHeart {
         public Titanium()
-          : base(2, TileID.AdamantiteForge, 1106) {
+          : base(TileID.AdamantiteForge, 1106) {
         }
     }
 }
