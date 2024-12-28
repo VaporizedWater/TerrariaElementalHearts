@@ -13,8 +13,8 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 
-namespace ElementalHeartsRevivedMod.src {
-    public class EHR_Base : ModItem {
+namespace ElementalHeartsRevivedMod.src.Hearts {
+    public partial class Heart_Base : ModItem {
         public bool boss;
         public string tag;
         public string name;
@@ -38,7 +38,7 @@ namespace ElementalHeartsRevivedMod.src {
         protected string maxHP;
         protected string heartNotUsed;
 
-        public EHR_Base(
+        public Heart_Base(
           int category,
           int station = 0,
           int material = 0,
@@ -63,7 +63,7 @@ namespace ElementalHeartsRevivedMod.src {
                     pathCategoryPrefix = "Hardmode/";
                     break;
                 case 3:
-                    pathCategoryPrefix = "Other/";
+                    pathCategoryPrefix = "Utility/";
                     break;
                 case 4:
                     pathCategoryPrefix = "PreHardmode/";
@@ -150,7 +150,7 @@ namespace ElementalHeartsRevivedMod.src {
                 return false;
             if (ModContent.GetInstance<Config>().EHRMaxHearts == 0 || ((EffectManager<Filter>)Filters.Scene)[Constants.RippleEffectName].IsActive())
                 return false;
-            return !player.GetModPlayer<EHR_Tracker>().used.ContainsKey(tag) || player.GetModPlayer<EHR_Tracker>().used[tag] < ModContent.GetInstance<Config>().EHRMaxHearts * bonusHP;
+            return !player.GetModPlayer<EHR_Player>().used.ContainsKey(tag) || player.GetModPlayer<EHR_Player>().used[tag] < ModContent.GetInstance<Config>().EHRMaxHearts * bonusHP;
         }
 
         public override bool? UseItem(Player player) {
@@ -158,10 +158,10 @@ namespace ElementalHeartsRevivedMod.src {
             player.statLife += bonusHP;
             if (Main.myPlayer == player.whoAmI)
                 player.HealEffect(bonusHP, true);
-            if (player.GetModPlayer<EHR_Tracker>().used.ContainsKey(tag))
-                player.GetModPlayer<EHR_Tracker>().used[tag] += bonusHP;
+            if (player.GetModPlayer<EHR_Player>().used.ContainsKey(tag))
+                player.GetModPlayer<EHR_Player>().used[tag] += bonusHP;
             else
-                player.GetModPlayer<EHR_Tracker>().used.Add(tag, bonusHP);
+                player.GetModPlayer<EHR_Player>().used.Add(tag, bonusHP);
             if (Main.netMode != NetmodeID.Server && !((EffectManager<Filter>)Filters.Scene)[Constants.RippleEffectName].IsActive() && ModContent.GetInstance<Config>().EHRWaveEnabled) {
                 int index = Projectile.NewProjectile(new EntitySource_ItemUse(player, Item, null), player.Center, new Vector2(0.0f, 0.0f), ModContent.GetInstance<EHR_RippleEffect>().Type, 0, 0.0f, Main.myPlayer, 0.0f, 0.0f);
                 (Main.projectile[index].ModProjectile as EHR_RippleEffect).SetWaveValues(bonusHP);
@@ -172,7 +172,6 @@ namespace ElementalHeartsRevivedMod.src {
 
         public override void SetStaticDefaults() {
             Mod.Logger.Info(tag + " initialized."); //Do not localize logs, these are more for the developer than the player
-            //CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[material] = 1;
         }
 
         public override void SetDefaults() {
@@ -287,9 +286,9 @@ namespace ElementalHeartsRevivedMod.src {
 
             //if max hearts in the config is greater than 1 then show the amount of hearts used out of the max amount of hearts that can be used
             if (ModContent.GetInstance<Config>().EHRMaxHearts > 1) {
-                Main.LocalPlayer.GetModPlayer<EHR_Tracker>().used.TryGetValue(tag, out int usedHearts);
+                Main.LocalPlayer.GetModPlayer<EHR_Player>().used.TryGetValue(tag, out int usedHearts);
                 int amountUsed = usedHearts / bonusHP;
-                if (Main.LocalPlayer.GetModPlayer<EHR_Tracker>().used.ContainsKey(tag)) {
+                if (Main.LocalPlayer.GetModPlayer<EHR_Player>().used.ContainsKey(tag)) {
                     tooltipReturned += "[" + amountUsed.ToString() + "/" + ModContent.GetInstance<Config>().EHRMaxHearts.ToString() + "]";
                 } else {
                     tooltipReturned += "[0/" + ModContent.GetInstance<Config>().EHRMaxHearts.ToString() + "]";
@@ -298,7 +297,6 @@ namespace ElementalHeartsRevivedMod.src {
             }
 
             return tooltipReturned += heartNotUsed;
-            //return tooltipReturned;
         }
 
         public override Color? GetAlpha(Color lightColor) {
