@@ -1,11 +1,16 @@
-﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+﻿using ElementalHeartsRevivedMod.lib.Interfaces.ItemCategory;
+using ElementalHeartsRevivedMod.lib.Interfaces.ItemTags;
+using ElementalHeartsRevivedMod.lib.Interfaces.Rarity;
+using System.Collections.Generic;
 using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
-{
-    public class Ebonsand : Heart_Base, PreHardmodeHeart {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
+    public class Ebonsand : HeartBase, PreHardmodeHeart, ConsumableItem, CraftableItem, WhiteRarity {
         public Ebonsand()
-          : base(TileID.HeavyWorkBench, 370) {
+          : base() {
         }
+
+        protected override List<int> MaterialCost => [ItemID.EbonsandBlock];
+        protected override int CraftingStation => TileID.HeavyWorkBench;
     }
 }

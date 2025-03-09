@@ -8,13 +8,22 @@ using Terraria.ModLoader.IO;
 
 namespace ElementalHeartsRevivedMod.src {
     public class EHR_Player : ModPlayer {
+        /// <summary>
+        /// The amount of health the player has gained from consuming hearts. <br></br><br></br>
+        /// The max hearts cap checks if this stored total bonusHP of the heart is greater than <br></br>
+        /// or equal to the bonus HP that heart provides times the max hearts per heart.
+        /// </summary>
         public IDictionary<string, int> used = new Dictionary<string, int>();
 
+        /// <summary>
+        /// Not much information on the docs about <i>when</i> or <i>how frequently</i> this is called, but Copilot says this is run every tick. <br></br>
+        /// So I assume that the statLifeMax2 is recalculated every tick... So no need to worry about if changing the values of the <br></br>
+        /// bonuses will end up breaking a character on a legacy save.
+        /// </summary>
         public override void ResetEffects() {
             if (used == null)
                 return;
-            foreach (KeyValuePair<string, int> keyValuePair in (IEnumerable<KeyValuePair<string, int>>)used)
-                Player.statLifeMax2 += keyValuePair.Value;
+            Player.statLifeMax2 += used.Values.Sum();
         }
 
         public override void SyncPlayer(int toWho, int fromWho, bool newPlayer) {

@@ -12,14 +12,19 @@
 namespace ElementalHeartsRevivedMod.Localization {
     public class LocalizationUtility {
 
-        /// <summary> provides a single method as a proxy for getting localized text with or without text replacements </summary>
-        public static string GetText(string key, string? replacementStr = null, object[]? replacements = null) {
-            if (replacementStr != null) {
-                return Language.GetTextValue("Mods.ElementalHeartsRevivedMod." + key, replacementStr);
-            } else if (replacements != null) {
-                return Language.GetTextValue("Mods.ElementalHeartsRevivedMod." + key, replacements);
-            }
+        /// <summary> provides a single method for getting localized text with or without text replacements </summary>
+        public static string GetText(string key, object[] replacements) {
+            return Language.GetTextValue("Mods.ElementalHeartsRevivedMod." + key, replacements);
+        }
+
+        /// <summary> provides a single method for getting localized text with or without text replacements </summary>
+        public static string GetText(string key) {
             return Language.GetTextValue("Mods.ElementalHeartsRevivedMod." + key);
+        }
+
+        /// <summary> provides a single method for getting localized text with or without text replacements </summary>
+        public static string GetText(string key, string replacementStr) {
+            return Language.GetTextValue("Mods.ElementalHeartsRevivedMod." + key, replacementStr);
         }
     }
 }

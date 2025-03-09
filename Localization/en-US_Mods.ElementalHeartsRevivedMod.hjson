@@ -7,6 +7,7 @@ CommonItemTooltip: {
 	MaxHP: Max HP
 	BonusHP: Bonus HP
 	HeartNotUsed: "[Can Use]"
+	ConsumeToolWarning: Warning: Crafting will consume the following item(s):{0}
 }
 
 Items: {
@@ -514,13 +515,13 @@ Items: {
 	HardHeart: {
 		DisplayName: Hard Heart
 		Tooltip: ""
-		OptionalTip: Destroys your love...
+		OptionalTip: Resets your bonus HP to 0. (Use with caution!)
 	}
 }
 
 Projectiles: {
 	EHRWave.DisplayName: Shockwave
-	EHR_RippleEffect.DisplayName: E H R_ Ripple Effect
+	EHR_RippleEffect.DisplayName: EHR Ripple Effect
 }
 
 Configs: {
@@ -575,6 +576,11 @@ Configs: {
 		EHRMaterialEnabled: {
 			Label: Enable Material Hearts (Default: On)
 			Tooltip: Allow material hearts to be crafted/used.
+		}
+
+		EHRConsumeToolsEnabled: {
+			Label: Enable Tool Consumption (Default: Off)
+			Tooltip: Consumes equipment items when crafting hearts that have them as ingredients.
 		}
 
 		RoamingLogsEnabled: {

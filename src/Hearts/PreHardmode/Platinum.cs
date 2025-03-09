@@ -1,11 +1,15 @@
-﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+﻿using ElementalHeartsRevivedMod.lib.Interfaces.ItemCategory;
+using ElementalHeartsRevivedMod.lib.Interfaces.ItemTags;
+using ElementalHeartsRevivedMod.lib.Interfaces.Rarity;
+using System.Collections.Generic;
 using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
-{
-    public class Platinum : Heart_Base, PreHardmodeHeart {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
+    public class Platinum : HeartBase, PreHardmodeHeart, ConsumableItem, CraftableItem, WhiteRarity {
         public Platinum()
-          : base(TileID.Furnaces, 702) {
+          : base() {
         }
+        protected override List<int> MaterialCost => [ItemID.PlatinumOre];
+        protected override int CraftingStation => TileID.Furnaces;
     }
 }

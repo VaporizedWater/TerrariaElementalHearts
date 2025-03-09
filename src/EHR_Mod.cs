@@ -1,6 +1,5 @@
 using ElementalHeartsRevivedMod.lib;
 using ElementalHeartsRevivedMod.src._UI;
-using ElementalHeartsRevivedMod.src.Hearts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -13,9 +12,10 @@ using Terraria.UI;
 
 namespace ElementalHeartsRevivedMod.src {
     public class EHR_Mod : Mod {
-        public IDictionary<Heart_Base, int> bossHearts = new Dictionary<Heart_Base, int>();
-        public IDictionary<Heart_Base, int> naturalHearts = new Dictionary<Heart_Base, int>();
-        public IDictionary<ModItem, int> otherHearts = new Dictionary<ModItem, int>();
+        //Don't know why this is here, it's in the original mod, but there are no uses for these dictionaries
+        //public IDictionary<HeartBase, int> bossHearts = new Dictionary<HeartBase, int>();
+        //public IDictionary<HeartBase, int> naturalHearts = new Dictionary<HeartBase, int>();
+        //public IDictionary<ModItem, int> otherHearts = new Dictionary<ModItem, int>();
     }
 
     [Autoload(Side = ModSide.Client)]
@@ -24,6 +24,7 @@ namespace ElementalHeartsRevivedMod.src {
         internal EHR_Mod mod = ModContent.GetInstance<EHR_Mod>();
         public UserInterface EHRInterface;
         internal EHR_UIState EHRUIState;
+        public bool isUserHoveringOverCraftingMenu = false;
 
         public override void Load() {
             EHRInterface = new UserInterface();

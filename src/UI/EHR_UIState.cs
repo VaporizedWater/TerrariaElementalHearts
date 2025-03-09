@@ -8,7 +8,7 @@ namespace ElementalHeartsRevivedMod.src._UI {
         }
 
         public void CreateText(string text, Color color) {
-            UIText uiText = new(text, 1f, false) {
+            UIText uiText = new(text) {
                 HAlign = 0.83f,
                 VAlign = 0.02f,
                 TextColor = color

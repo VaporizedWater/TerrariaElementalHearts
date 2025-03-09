@@ -1,6 +1,7 @@
 ﻿using ElementalHeartsRevivedMod.Assets.Effects;
 using ElementalHeartsRevivedMod.lib;
-using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+using ElementalHeartsRevivedMod.lib.Interfaces.ItemCategory;
+using ElementalHeartsRevivedMod.lib.Interfaces.ItemTags;
 using ElementalHeartsRevivedMod.Localization;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -12,7 +13,7 @@ using Terraria.ModLoader;
 
 
 namespace ElementalHeartsRevivedMod.src.Hearts.Utility {
-    public class HardHeart : Heart_Base, UtilityHeart {
+    public class HardHeart : HeartBase, UtilityHeart, CraftableItem {
         public HardHeart() : base() {
             name = LocalizationUtility.GetText("Items.HardHeart.DisplayName");
             tooltipCreated = false;
@@ -24,7 +25,7 @@ namespace ElementalHeartsRevivedMod.src.Hearts.Utility {
 
         public override bool? UseItem(Player player) {
             player.GetModPlayer<EHR_Player>().used.Clear();
-            SoundEngine.PlaySound(SoundID.PlayerKilled, new Vector2?());
+            _ = SoundEngine.PlaySound(SoundID.PlayerKilled, new Vector2?());
             if (Main.netMode != NetmodeID.Server && !((EffectManager<Filter>)Filters.Scene)[Constants.RippleEffectName].IsActive() && ModContent.GetInstance<Config>().EHRWaveEnabled) {
                 int index = Projectile.NewProjectile(new EntitySource_ItemUse(player, Item, null), player.Center, new Vector2(0.0f, 0.0f), ModContent.GetInstance<EHR_RippleEffect>().Type, 0, 0.0f, Main.myPlayer, 0.0f, 0.0f);
                 (Main.projectile[index].ModProjectile as EHR_RippleEffect).SetWaveValues();
@@ -52,9 +53,8 @@ namespace ElementalHeartsRevivedMod.src.Hearts.Utility {
         }
 
         public override void AddRecipes() {
-            Recipe recipe1 = Recipe.Create(ModContent.ItemType<HardHeart>());
-            recipe1.AddTile(TileID.DemonAltar).Register();
-            recipe1.Register();
+            Recipe recipe1 = CreateRecipe();
+            _ = recipe1.AddTile(TileID.DemonAltar).Register();
         }
 
         protected override void ModifyTooltip(TooltipLine tooltip) {

@@ -5,13 +5,10 @@
 
 	<!-- General -->
 	<PropertyGroup>
-		
+	  <Configurations>Debug;Release;Test</Configurations>
 	</PropertyGroup>
 	<ItemGroup>
 	  <None Remove="lib\NPCID Enums.txt" />
-	</ItemGroup>
-	<ItemGroup>
-	  <Folder Include="lib\Markers\Rarity\" />
 	</ItemGroup>
 
 	<!-- References -->

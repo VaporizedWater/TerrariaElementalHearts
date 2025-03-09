@@ -1,4 +1,4 @@
 ﻿[*.cs]
 
-# SYSLIB1045: Convert to 'GeneratedRegexAttribute'.
-dotnet_diagnostic.SYSLIB1045.severity = none
+# IDE1006: Naming Styles
+dotnet_diagnostic.IDE1006.severity = none

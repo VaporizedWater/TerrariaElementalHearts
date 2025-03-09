@@ -1,11 +1,15 @@
-﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+﻿using ElementalHeartsRevivedMod.lib.Interfaces.ItemCategory;
+using ElementalHeartsRevivedMod.lib.Interfaces.ItemTags;
+using ElementalHeartsRevivedMod.lib.Interfaces.Rarity;
+using System.Collections.Generic;
 using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
-{
-    public class Emerald : Heart_Base, PreHardmodeHeart {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
+    public class Emerald : HeartBase, PreHardmodeHeart, ConsumableItem, CraftableItem, WhiteRarity {
         public Emerald()
-          : base(TileID.TreeEmerald, 179) {
+          : base() {
         }
+        protected override List<int> MaterialCost => [ItemID.Emerald];
+        protected override int CraftingStation => TileID.TreeEmerald;
     }
 }

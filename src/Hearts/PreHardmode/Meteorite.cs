@@ -1,11 +1,15 @@
-﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+﻿using ElementalHeartsRevivedMod.lib.Interfaces.ItemCategory;
+using ElementalHeartsRevivedMod.lib.Interfaces.ItemTags;
+using ElementalHeartsRevivedMod.lib.Interfaces.Rarity;
+using System.Collections.Generic;
 using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode
-{
-    public class Meteorite : Heart_Base, PreHardmodeHeart {
+namespace ElementalHeartsRevivedMod.src.Hearts.PreHardmode {
+    public class Meteorite : HeartBase, PreHardmodeHeart, ConsumableItem, CraftableItem, WhiteRarity {
         public Meteorite()
-          : base(TileID.Furnaces, 116) {
+          : base() {
         }
+        protected override List<int> MaterialCost => [ItemID.Meteorite];
+        protected override int CraftingStation => TileID.Furnaces;
     }
 }

@@ -1,10 +1,8 @@
 ﻿using System.ComponentModel;
 using Terraria.ModLoader.Config;
 
-namespace ElementalHeartsRevivedMod.lib
-{
-    public class Config : ModConfig
-    {
+namespace ElementalHeartsRevivedMod.lib {
+    public class Config : ModConfig {
 
         [Header(Constants.BaseConfig + "Headers.Basic")]
         [Category("Regular")]
@@ -91,6 +89,14 @@ namespace ElementalHeartsRevivedMod.lib
         [TooltipKey(Constants.BaseConfig + "EHRMaterialEnabled.Tooltip")]
         [Description(Constants.BaseConfig + "EHRMaterialEnabled.Tooltip")]
         public bool EHRMaterialEnabled;
+
+        [Category("Advanced")]
+        [DefaultValue(false)]
+        [ReloadRequired]
+        [LabelKey(Constants.BaseConfig + "EHRConsumeToolsEnabled.Label")]
+        [TooltipKey(Constants.BaseConfig + "EHRConsumeToolsEnabled.Tooltip")]
+        [Description(Constants.BaseConfig + "EHRConsumeToolsEnabled.Tooltip")]
+        public bool EHRConsumeToolsEnabled;
 
 
         [Category("Advanced")]

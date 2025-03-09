@@ -1,3 +1,7 @@
+// Note:	Do not publish new version until you can implement save converter (overhaul changed how 
+//			much health some hearts give, so it may corrupt people's characters, if hard heart is used)
+
 displayName = Elemental Hearts Revived
 author = Goob
-version = 1.15
+version = 1.14
+

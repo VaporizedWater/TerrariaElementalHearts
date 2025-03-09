@@ -1,11 +1,16 @@
-﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+﻿using ElementalHeartsRevivedMod.lib.Interfaces.ItemCategory;
+using ElementalHeartsRevivedMod.lib.Interfaces.ItemTags;
+using ElementalHeartsRevivedMod.lib.Interfaces.Rarity;
+using System.Collections.Generic;
 using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
-{
-    public class Rainbow : Heart_Base, HardmodeHeart {
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
+    public class Rainbow : HeartBase, HardmodeHeart, ConsumableItem, CraftableItem, RainbowItem, BlueRarity {
         public Rainbow()
-          : base(TileID.Anvils, 662, rainbowEffect: true) {
+          : base() {
         }
+
+        protected override List<int> MaterialCost => [ItemID.RainbowBrick];
+        protected override int CraftingStation => TileID.Anvils;
     }
 }

@@ -1,11 +1,16 @@
-﻿using ElementalHeartsRevivedMod.lib.Markers.ItemCategory;
+﻿using ElementalHeartsRevivedMod.lib.Interfaces.ItemCategory;
+using ElementalHeartsRevivedMod.lib.Interfaces.ItemTags;
+using ElementalHeartsRevivedMod.lib.Interfaces.Rarity;
+using System.Collections.Generic;
 using Terraria.ID;
 
-namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode
-{
-    public class SpookyWood : Heart_Base, HardmodeHeart {
+namespace ElementalHeartsRevivedMod.src.Hearts.Hardmode {
+    public class SpookyWood : HeartBase, HardmodeHeart, ConsumableItem, CraftableItem, WhiteRarity {
         public SpookyWood()
-          : base(TileID.Sawmill, 1729) {
+          : base() {
         }
+
+        protected override List<int> MaterialCost => new List<int>() { ItemID.SpookyWood };
+        protected override int CraftingStation => TileID.Sawmill;
     }
 }
