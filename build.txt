@@ -3,5 +3,5 @@
 
 displayName = Elemental Hearts Revived
 author = Goob
-version = 1.14
+version = 1.15
 
