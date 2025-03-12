@@ -1,6 +1,5 @@
 ﻿using ElementalHeartsRevivedMod.Assets.Effects;
 using ElementalHeartsRevivedMod.lib;
-using ElementalHeartsRevivedMod.lib.Interfaces;
 using ElementalHeartsRevivedMod.lib.Interfaces.ItemCategory;
 using ElementalHeartsRevivedMod.lib.Interfaces.ItemTags;
 using ElementalHeartsRevivedMod.lib.Interfaces.Rarity;
@@ -22,7 +21,7 @@ namespace ElementalHeartsRevivedMod.src.Hearts {
     /// The base class for all hearts in the mod. Contains all the necessary logic for hearts to function. <br></br>
     /// Including the functionality for many of the marker interfaces.
     /// </summary>
-    public abstract class HeartBase : ModItem, ItemRarityBase, ItemCategoryBase {
+    public abstract class HeartBase : ModItem {
         private const string UnusedHeartTooltipValue = "[0/";
 
         // Properties
@@ -37,7 +36,7 @@ namespace ElementalHeartsRevivedMod.src.Hearts {
 
 
         // Tooltip constants
-        public bool tooltipCreated;
+        protected bool tooltipCreated;
         protected string optionalTip;
         protected string bonus;
         protected string bossHeartsDisabled;
@@ -86,16 +85,22 @@ namespace ElementalHeartsRevivedMod.src.Hearts {
 
             if (this is BossHeart) {
                 prefix = "Boss/";
+                ModContent.GetInstance<EHR_Mod>().bossHearts.Add(this, ModContent.GetInstance<EHR_Mod>().bossHearts.Count + 1);
             } else if (this is HardmodeHeart) {
                 prefix = "Hardmode/";
+                ModContent.GetInstance<EHR_Mod>().naturalHearts.Add(this, ModContent.GetInstance<EHR_Mod>().naturalHearts.Count + 1);
             } else if (this is PreHardmodeHeart) {
                 prefix = "PreHardmode/";
+                ModContent.GetInstance<EHR_Mod>().naturalHearts.Add(this, ModContent.GetInstance<EHR_Mod>().naturalHearts.Count + 1);
             } else if (this is UtilityHeart) {
                 prefix = "Utility/";
+                ModContent.GetInstance<EHR_Mod>().naturalHearts.Add(this, ModContent.GetInstance<EHR_Mod>().naturalHearts.Count + 1);
             } else if (this is AlloyHeart) {
                 prefix = "Alloy/";
+                ModContent.GetInstance<EHR_Mod>().naturalHearts.Add(this, ModContent.GetInstance<EHR_Mod>().naturalHearts.Count + 1);
             } else {
                 prefix = "Test/";
+                ModContent.GetInstance<EHR_Mod>().naturalHearts.Add(this, ModContent.GetInstance<EHR_Mod>().naturalHearts.Count + 1);
             }
 
             // All of these are + 1 because the rarity of White = 0
@@ -309,19 +314,17 @@ namespace ElementalHeartsRevivedMod.src.Hearts {
             tooltip.Text = CalculateTooltip();
         }
 
+        /// <summary>
+        /// After doing a lot of testing and looking at the example mod on the tml github, I've come to the conclusion that it is
+        /// acceptable to create and add a tooltip everytime this gets called because old tooltips seem to be garbage collected as
+        /// the count of the tooltipline list doesn't wildly increase and in some instances, it had decreased. This is good because
+        /// it will allow me to animate the colors of the tooltip using an EHR_Utility method.
+        /// </summary>
+        /// <param name="tooltips"></param>
         public override void ModifyTooltips(List<TooltipLine> tooltips) {
-            if (!tooltipCreated) {
-                TooltipLine tooltipLine = new(Mod, tag, name);
-                tooltips.Add(tooltipLine);
-                tooltipCreated = true;
-            } else {
-                TooltipLine tooltip = tooltips.Find(ttl => {
-                    return ttl.Name == tag;
-                });
-                if (tooltip != null) {
-                    ModifyTooltip(tooltip);
-                }
-            }
+            TooltipLine tooltipLine = new(Mod, tag, name);
+            ModifyTooltip(tooltipLine);
+            tooltips.Add(tooltipLine);
         }
 
         public override void Update(ref float gravity, ref float maxFallSpeed) {
@@ -407,9 +410,9 @@ namespace ElementalHeartsRevivedMod.src.Hearts {
                 _ = Main.LocalPlayer.GetModPlayer<EHR_Player>().used.TryGetValue(tag, out int usedHearts);
                 int amountUsed = usedHearts / bonusHP;
                 if (Main.LocalPlayer.GetModPlayer<EHR_Player>().used.ContainsKey(tag)) {
-                    _ = tooltipReturned.Append('[').Append(amountUsed).Append('/').Append(Config.EHRMaxHearts).Append(']');
+                    _ = tooltipReturned.Append('［').Append(amountUsed).Append('/').Append(Config.EHRMaxHearts).Append('］');
                 } else {
-                    _ = tooltipReturned.Append(UnusedHeartTooltipValue).Append(Config.EHRMaxHearts).Append(']');
+                    _ = tooltipReturned.Append(UnusedHeartTooltipValue).Append(Config.EHRMaxHearts).Append('］');
                 }
                 return tooltipReturned.ToString();
             }

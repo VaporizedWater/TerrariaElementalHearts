@@ -1,0 +1,357 @@
+﻿Constructing: Adamantite
+Constructing: Adamantite
+Constructing: Chlorophyte
+Constructing: Chlorophyte
+Constructing: Cobalt
+Constructing: Cobalt
+Constructing: Crystal
+Constructing: Crystal
+Constructing: Cursed Flame
+Constructing: Cursed Flame
+Constructing: Discord
+Constructing: Discord
+Constructing: Ectoplasm
+Constructing: Ectoplasm
+Constructing: Flesh
+Constructing: Flesh
+Constructing: Flight
+Constructing: Flight
+Constructing: Horny
+Constructing: Horny
+Constructing: Ichor
+Constructing: Ichor
+Constructing: Lesion
+Constructing: Lesion
+Constructing: Light
+Constructing: Light
+Constructing: Luminite
+Constructing: Luminite
+Constructing: Mythril
+Constructing: Mythril
+Constructing: Night
+Constructing: Night
+Constructing: Orichalcum
+Constructing: Orichalcum
+Constructing: Palladium
+Constructing: Palladium
+Constructing: Pearlsand
+Constructing: Pearlsand
+Constructing: Pearlstone
+Constructing: Pearlstone
+Constructing: Pearlwood
+Constructing: Pearlwood
+Constructing: Pink Ice
+Constructing: Pink Ice
+Constructing: Rainbow
+Constructing: Rainbow
+Constructing: Spooky Wood
+Constructing: Spooky Wood
+Constructing: Titanium
+Constructing: Titanium
+Constructing: Amber
+Constructing: Amber
+Constructing: Amethyst
+Constructing: Amethyst
+Constructing: Boreal Wood
+Constructing: Boreal Wood
+Constructing: Cactus
+Constructing: Cactus
+Constructing: Candy Cane
+Constructing: Candy Cane
+Constructing: Cloud
+Constructing: Cloud
+Constructing: Copper
+Constructing: Copper
+Constructing: Coralstone
+Constructing: Coralstone
+Constructing: Crimsand
+Constructing: Crimsand
+Constructing: Crimtane
+Constructing: Crimtane
+Constructing: Demonite
+Constructing: Demonite
+Constructing: Diamond
+Constructing: Diamond
+Constructing: Dirt
+Constructing: Dirt
+Constructing: Dynasty
+Constructing: Dynasty
+Constructing: Ebonsand
+Constructing: Ebonsand
+Constructing: Ebonstone
+Constructing: Ebonstone
+Constructing: Emerald
+Constructing: Emerald
+Constructing: Enchanted
+Constructing: Enchanted
+Constructing: Fossil
+Constructing: Fossil
+Constructing: Glass
+Constructing: Glass
+Constructing: Gold
+Constructing: Gold
+Constructing: Granite
+Constructing: Granite
+Constructing: Hay
+Constructing: Hay
+Constructing: Hellstone
+Constructing: Hellstone
+Constructing: Honey
+Constructing: Honey
+Constructing: Ice
+Constructing: Ice
+Constructing: Iron
+Constructing: Iron
+Constructing: Lead
+Constructing: Lead
+Constructing: Marble
+Constructing: Marble
+Constructing: Meteorite
+Constructing: Meteorite
+Constructing: Mushroom
+Constructing: Mushroom
+Constructing: Obsidian
+Constructing: Obsidian
+Constructing: Palm Wood
+Constructing: Palm Wood
+Constructing: Platinum
+Constructing: Platinum
+Constructing: Pumpkin
+Constructing: Pumpkin
+Constructing: Purple Ice
+Constructing: Purple Ice
+Constructing: Rain Cloud
+Constructing: Rain Cloud
+Constructing: Red Ice
+Constructing: Red Ice
+Constructing: Rich Mahogany
+Constructing: Rich Mahogany
+Constructing: Ruby
+Constructing: Ruby
+Constructing: Sand
+Constructing: Sand
+Constructing: Sapphire
+Constructing: Sapphire
+Constructing: Shadewood
+Constructing: Shadewood
+Constructing: Silver
+Constructing: Silver
+Constructing: Slime
+Constructing: Slime
+Constructing: Snow Cloud
+Constructing: Snow Cloud
+Constructing: Stone
+Constructing: Stone
+Constructing: Sunplate
+Constructing: Sunplate
+Constructing: Tin
+Constructing: Tin
+Constructing: Topaz
+Constructing: Topaz
+Constructing: Tungsten
+Constructing: Tungsten
+Constructing: Wood
+Constructing: Wood
+Constructing: Hard Heart
+Constructing: Betsy
+Constructing: Brain Of Cthulhu
+Constructing: Deer
+Constructing: Duke Fishron
+Constructing: Eater Of Worlds
+Constructing: Empress Of Light
+Constructing: Eye Of Cthulhu
+Constructing: Flying Dutchman
+Constructing: Golem
+Constructing: King Slime
+Constructing: Lunatic Cultist
+Constructing: Martian Saucer
+Constructing: Moon Lord
+Constructing: Plantera
+Constructing: Queen Bee
+Constructing: Queen Slime
+Constructing: Skeletron
+Constructing: Soul Of Fright
+Constructing: Soul Of Might
+Constructing: Soul Of Sight
+Constructing: Adamantite
+Constructing: Bubble
+Constructing: Chlorophyte
+Constructing: Cobalt
+Constructing: Cog
+Constructing: Crystal
+Constructing: Cursed Flame
+Constructing: Discord
+Constructing: Ectoplasm
+Constructing: Flesh
+Constructing: Flight
+Constructing: Horny
+Constructing: Ichor
+Constructing: Lesion
+Constructing: Light
+Constructing: Luminite
+Constructing: Mythril
+Constructing: Night
+Constructing: Orichalcum
+Constructing: Palladium
+Constructing: Pearlsand
+Constructing: Pearlstone
+Constructing: Pearlwood
+Constructing: Pink Ice
+Constructing: Rainbow
+Constructing: Spooky Wood
+Constructing: Titanium
+Constructing: Amber
+Constructing: Amethyst
+Constructing: Boreal Wood
+Constructing: Cactus
+Constructing: Candy Cane
+Constructing: Cloud
+Constructing: Copper
+Constructing: Coralstone
+Constructing: Crimsand
+Constructing: Crimtane
+Constructing: Demonite
+Constructing: Diamond
+Constructing: Dirt
+Constructing: Dynasty
+Constructing: Ebonsand
+Constructing: Ebonstone
+Constructing: Emerald
+Constructing: Enchanted
+Constructing: Fossil
+Constructing: Glass
+Constructing: Gold
+Constructing: Granite
+Constructing: Hay
+Constructing: Hellstone
+Constructing: Honey
+Constructing: Ice
+Constructing: Iron
+Constructing: Lead
+Constructing: Life Crystal
+Constructing: Marble
+Constructing: Meteorite
+Constructing: Mushroom
+Constructing: Obsidian
+Constructing: Palm Wood
+Constructing: Platinum
+Constructing: Pumpkin
+Constructing: Purple Ice
+Constructing: Rain Cloud
+Constructing: Red Ice
+Constructing: Rich Mahogany
+Constructing: Ruby
+Constructing: Sand
+Constructing: Sapphire
+Constructing: Shadewood
+Constructing: Silver
+Constructing: Slime
+Constructing: Snow Cloud
+Constructing: Stone
+Constructing: Sunplate
+Constructing: Tin
+Constructing: Topaz
+Constructing: Tungsten
+Constructing: Wood
+Constructing: Hard Heart
+Constructing: Betsy
+Constructing: Brain Of Cthulhu
+Constructing: Deer
+Constructing: Duke Fishron
+Constructing: Eater Of Worlds
+Constructing: Empress Of Light
+Constructing: Eye Of Cthulhu
+Constructing: Flying Dutchman
+Constructing: Golem
+Constructing: King Slime
+Constructing: Lunatic Cultist
+Constructing: Martian Saucer
+Constructing: Moon Lord
+Constructing: Plantera
+Constructing: Queen Bee
+Constructing: Queen Slime
+Constructing: Skeletron
+Constructing: Soul Of Fright
+Constructing: Soul Of Might
+Constructing: Soul Of Sight
+Constructing: Adamantite
+Constructing: Bubble
+Constructing: Chlorophyte
+Constructing: Cobalt
+Constructing: Cog
+Constructing: Crystal
+Constructing: Cursed Flame
+Constructing: Discord
+Constructing: Ectoplasm
+Constructing: Flesh
+Constructing: Flight
+Constructing: Horny
+Constructing: Ichor
+Constructing: Lesion
+Constructing: Light
+Constructing: Luminite
+Constructing: Mythril
+Constructing: Night
+Constructing: Orichalcum
+Constructing: Palladium
+Constructing: Pearlsand
+Constructing: Pearlstone
+Constructing: Pearlwood
+Constructing: Pink Ice
+Constructing: Rainbow
+Constructing: Spooky Wood
+Constructing: Titanium
+Constructing: Amber
+Constructing: Amethyst
+Constructing: Boreal Wood
+Constructing: Cactus
+Constructing: Candy Cane
+Constructing: Cloud
+Constructing: Copper
+Constructing: Coralstone
+Constructing: Crimsand
+Constructing: Crimtane
+Constructing: Demonite
+Constructing: Diamond
+Constructing: Dirt
+Constructing: Dynasty
+Constructing: Ebonsand
+Constructing: Ebonstone
+Constructing: Emerald
+Constructing: Enchanted
+Constructing: Fossil
+Constructing: Glass
+Constructing: Gold
+Constructing: Granite
+Constructing: Hay
+Constructing: Hellstone
+Constructing: Honey
+Constructing: Ice
+Constructing: Iron
+Constructing: Lead
+Constructing: Life Crystal
+Constructing: Marble
+Constructing: Meteorite
+Constructing: Mushroom
+Constructing: Obsidian
+Constructing: Palm Wood
+Constructing: Platinum
+Constructing: Pumpkin
+Constructing: Purple Ice
+Constructing: Rain Cloud
+Constructing: Red Ice
+Constructing: Rich Mahogany
+Constructing: Ruby
+Constructing: Sand
+Constructing: Sapphire
+Constructing: Shadewood
+Constructing: Silver
+Constructing: Slime
+Constructing: Snow Cloud
+Constructing: Stone
+Constructing: Sunplate
+Constructing: Tin
+Constructing: Topaz
+Constructing: Tungsten
+Constructing: Wood
+Constructing: Hard Heart

@@ -1,5 +1,6 @@
 using ElementalHeartsRevivedMod.lib;
 using ElementalHeartsRevivedMod.src._UI;
+using ElementalHeartsRevivedMod.src.Hearts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,10 +13,9 @@ using Terraria.UI;
 
 namespace ElementalHeartsRevivedMod.src {
     public class EHR_Mod : Mod {
-        //Don't know why this is here, it's in the original mod, but there are no uses for these dictionaries
-        //public IDictionary<HeartBase, int> bossHearts = new Dictionary<HeartBase, int>();
-        //public IDictionary<HeartBase, int> naturalHearts = new Dictionary<HeartBase, int>();
-        //public IDictionary<ModItem, int> otherHearts = new Dictionary<ModItem, int>();
+        public IDictionary<HeartBase, int> bossHearts = new Dictionary<HeartBase, int>();
+        public IDictionary<HeartBase, int> naturalHearts = new Dictionary<HeartBase, int>();
+        public IDictionary<ModItem, int> otherHearts = new Dictionary<ModItem, int>();
     }
 
     [Autoload(Side = ModSide.Client)]
