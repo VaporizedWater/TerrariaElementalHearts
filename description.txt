@@ -1,3 +1,11 @@
+The latest version (2.0) is a complete rewrite for the purpose of being easy to maintain. However, since Lite has come back and is updating the original mod again to follow a vision they had for the mod, I recommend going back to the original linked below.
+
+I am likely going to be either contributing to that mod directly or will be making an extension for that mod to add the additional things like a UI catalog of hearts among other things I had planned. This version will only be maintained for those who want to keep their modpacks the same with minimal management.
+
+Also, the gem hearts bug likely isn't a bug (I was unable to reproduce it) and is rather the fact that each gem heart requires the exact gem tree that matches the gem material.
+
+Old Description:
+
 A revival of the classic mod - Elemental Hearts - adds in numerous consumable life crystals crafted using the various elements found across the game, bought from NPCs, or rewarded for killing bosses. 
 
 	Quality > Quantity!
@@ -13,12 +21,7 @@ Additions:
 
 Planned Additions:
 	Checklist UI for showing which hearts have been used.
-	Consumable that disables effects of hearts earned temporarily with either a toggle or timer.
-
-Recently updated to 1.4.4, and currently doing a complete overhaul of the entire mod before adding the checklist UI. This will include how the mod saves data.
-However, there is no need to worry about old saves, I will keep the legacy loading/saving options in and will provide a config option to turn this on/off.
-For this version of the mod (1.14), there will be no config option until I finish the overhaul, and all saving and loading will function as usual.
-
+	
 Original Elemental Hearts: https://steamcommunity.com/sharedfiles/filedetails/?id=2666581077
 Discord Link (Same as Original Elemental Hearts): https://discord.gg/WHMg38mXs8
 
